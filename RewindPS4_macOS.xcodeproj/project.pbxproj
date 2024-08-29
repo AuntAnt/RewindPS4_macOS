@@ -1,0 +1,652 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		181403322C8F7F3C00E369D7 /* Logs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181403312C8F7F3C00E369D7 /* Logs.swift */; };
+		181403342C8F7F6E00E369D7 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181403332C8F7F6E00E369D7 /* Logging.swift */; };
+		1823CDFF2C81F0A200C80D12 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CDFE2C81F0A200C80D12 /* StartButton.swift */; };
+		1823CE012C81F34B00C80D12 /* ModeSelectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE002C81F34B00C80D12 /* ModeSelectionButton.swift */; };
+		1823CE052C821B8E00C80D12 /* InfoLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE042C821B8E00C80D12 /* InfoLabelView.swift */; };
+		1823CE092C825E1900C80D12 /* DeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE082C825E1900C80D12 /* DeviceView.swift */; };
+		1823CE0B2C82643C00C80D12 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE0A2C82643C00C80D12 /* View+.swift */; };
+		1823CE122C838BE500C80D12 /* ServerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE112C838BE500C80D12 /* ServerInfoView.swift */; };
+		1823CE142C844F2400C80D12 /* CGSize+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE132C844F2400C80D12 /* CGSize+.swift */; };
+		1823CE172C844F8200C80D12 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE162C844F8200C80D12 /* Mode.swift */; };
+		1823CE192C84809700C80D12 /* Binding+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE182C84809700C80D12 /* Binding+.swift */; };
+		1823CE1B2C8495DA00C80D12 /* NoModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE1A2C8495DA00C80D12 /* NoModeView.swift */; };
+		1823CE1E2C84A5D100C80D12 /* ModeOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE1D2C84A5D100C80D12 /* ModeOneView.swift */; };
+		1823CE202C84A5E200C80D12 /* ModeTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE1F2C84A5E200C80D12 /* ModeTwoView.swift */; };
+		1823CE232C84B80E00C80D12 /* DowngradingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE222C84B80E00C80D12 /* DowngradingViewModel.swift */; };
+		18735AA82C80B86D00486D28 /* RewindPS4_MacOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18735AA72C80B86D00486D28 /* RewindPS4_MacOSApp.swift */; };
+		18735AAA2C80B86D00486D28 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18735AA92C80B86D00486D28 /* ContentView.swift */; };
+		18735AAC2C80B87A00486D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18735AAB2C80B87A00486D28 /* Assets.xcassets */; };
+		18735AAF2C80B87A00486D28 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18735AAE2C80B87A00486D28 /* Preview Assets.xcassets */; };
+		18735AB72C80B92C00486D28 /* ProxyServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18735AB62C80B92C00486D28 /* ProxyServerView.swift */; };
+		18735AB92C80BFF600486D28 /* ModeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18735AB82C80BFF600486D28 /* ModeSelectionView.swift */; };
+		18735ABB2C80C41600486D28 /* ModeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18735ABA2C80C41600486D28 /* ModeInfoView.swift */; };
+		18735ABD2C819F9300486D28 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18735ABC2C819F9300486D28 /* HeaderView.swift */; };
+		189319CB2C8C7FBE0030EFE0 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189319CA2C8C7FBE0030EFE0 /* Network.swift */; };
+		189319CD2C8D7ECC0030EFE0 /* Proxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189319CC2C8D7ECC0030EFE0 /* Proxy.swift */; };
+		189319CF2C8D925E0030EFE0 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189319CE2C8D925E0030EFE0 /* Mapper.swift */; };
+		18A3B0152C8B2B9200870E0C /* GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3B0142C8B2B9200870E0C /* GameInfo.swift */; };
+		18A3B0172C8B32F000870E0C /* GameInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3B0162C8B32F000870E0C /* GameInfoView.swift */; };
+		18A3B0192C8B349A00870E0C /* Image+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3B0182C8B349A00870E0C /* Image+.swift */; };
+		18A3B01C2C8B495F00870E0C /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3B01B2C8B495F00870E0C /* AlertMessage.swift */; };
+		18A874F52C81D24F00725456 /* seiha.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 18A874F22C81D09A00725456 /* seiha.ttf */; };
+		18A874F82C81D55900725456 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A874F72C81D55900725456 /* Font+.swift */; };
+		18A874FA2C81D98600725456 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A874F92C81D98600725456 /* BackgroundView.swift */; };
+		18A874FE2C81E71B00725456 /* ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A874FD2C81E71B00725456 /* ImageName.swift */; };
+		18BE15572C90D69C000AE0A6 /* RewindPS4Proxy in Frameworks */ = {isa = PBXBuildFile; productRef = 18BE15562C90D69C000AE0A6 /* RewindPS4Proxy */; };
+		18DF17EF2C960EA600D0B31D /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF17EE2C960EA600D0B31D /* SpinnerView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		181DD0F42C88A50400DB6240 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18A874F42C81D22700725456 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Fonts;
+			dstSubfolderSpec = 7;
+			files = (
+				18A874F52C81D24F00725456 /* seiha.ttf in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		181403312C8F7F3C00E369D7 /* Logs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logs.swift; sourceTree = "<group>"; };
+		181403332C8F7F6E00E369D7 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		1823CDFE2C81F0A200C80D12 /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
+		1823CE002C81F34B00C80D12 /* ModeSelectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSelectionButton.swift; sourceTree = "<group>"; };
+		1823CE042C821B8E00C80D12 /* InfoLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLabelView.swift; sourceTree = "<group>"; };
+		1823CE082C825E1900C80D12 /* DeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceView.swift; sourceTree = "<group>"; };
+		1823CE0A2C82643C00C80D12 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		1823CE112C838BE500C80D12 /* ServerInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerInfoView.swift; sourceTree = "<group>"; };
+		1823CE132C844F2400C80D12 /* CGSize+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+.swift"; sourceTree = "<group>"; };
+		1823CE162C844F8200C80D12 /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
+		1823CE182C84809700C80D12 /* Binding+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+.swift"; sourceTree = "<group>"; };
+		1823CE1A2C8495DA00C80D12 /* NoModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoModeView.swift; sourceTree = "<group>"; };
+		1823CE1D2C84A5D100C80D12 /* ModeOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeOneView.swift; sourceTree = "<group>"; };
+		1823CE1F2C84A5E200C80D12 /* ModeTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeTwoView.swift; sourceTree = "<group>"; };
+		1823CE222C84B80E00C80D12 /* DowngradingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DowngradingViewModel.swift; sourceTree = "<group>"; };
+		18735AA72C80B86D00486D28 /* RewindPS4_MacOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewindPS4_MacOSApp.swift; sourceTree = "<group>"; };
+		18735AA92C80B86D00486D28 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		18735AAB2C80B87A00486D28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18735AAE2C80B87A00486D28 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		18735AB62C80B92C00486D28 /* ProxyServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyServerView.swift; sourceTree = "<group>"; };
+		18735AB82C80BFF600486D28 /* ModeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSelectionView.swift; sourceTree = "<group>"; };
+		18735ABA2C80C41600486D28 /* ModeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeInfoView.swift; sourceTree = "<group>"; };
+		18735ABC2C819F9300486D28 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		18735AC02C81B96000486D28 /* RewindPS4-MacOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RewindPS4-MacOS-Info.plist"; sourceTree = SOURCE_ROOT; };
+		189319C82C8B5AD30030EFE0 /* RewindPS4_MacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RewindPS4_MacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		189319CA2C8C7FBE0030EFE0 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		189319CC2C8D7ECC0030EFE0 /* Proxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proxy.swift; sourceTree = "<group>"; };
+		189319CE2C8D925E0030EFE0 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		18A3B0142C8B2B9200870E0C /* GameInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfo.swift; sourceTree = "<group>"; };
+		18A3B0162C8B32F000870E0C /* GameInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoView.swift; sourceTree = "<group>"; };
+		18A3B0182C8B349A00870E0C /* Image+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+.swift"; sourceTree = "<group>"; };
+		18A3B01B2C8B495F00870E0C /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
+		18A874F22C81D09A00725456 /* seiha.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = seiha.ttf; sourceTree = "<group>"; };
+		18A874F72C81D55900725456 /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
+		18A874F92C81D98600725456 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		18A874FD2C81E71B00725456 /* ImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageName.swift; sourceTree = "<group>"; };
+		18DF17EE2C960EA600D0B31D /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18735AA12C80B86D00486D28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18BE15572C90D69C000AE0A6 /* RewindPS4Proxy in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1823CE022C81F35C00C80D12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1823CE042C821B8E00C80D12 /* InfoLabelView.swift */,
+				18A874F92C81D98600725456 /* BackgroundView.swift */,
+				18DF17EE2C960EA600D0B31D /* SpinnerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1823CE032C81F36700C80D12 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				1823CDFE2C81F0A200C80D12 /* StartButton.swift */,
+				1823CE002C81F34B00C80D12 /* ModeSelectionButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		1823CE062C825B6E00C80D12 /* ModeInfo */ = {
+			isa = PBXGroup;
+			children = (
+				1823CE1C2C84A5B800C80D12 /* ModesView */,
+				18735ABA2C80C41600486D28 /* ModeInfoView.swift */,
+				18A3B0162C8B32F000870E0C /* GameInfoView.swift */,
+			);
+			path = ModeInfo;
+			sourceTree = "<group>";
+		};
+		1823CE072C825DFC00C80D12 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				18735ABC2C819F9300486D28 /* HeaderView.swift */,
+				1823CE082C825E1900C80D12 /* DeviceView.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		1823CE102C838BC500C80D12 /* ProxyServer */ = {
+			isa = PBXGroup;
+			children = (
+				18735AB62C80B92C00486D28 /* ProxyServerView.swift */,
+				1823CE112C838BE500C80D12 /* ServerInfoView.swift */,
+			);
+			path = ProxyServer;
+			sourceTree = "<group>";
+		};
+		1823CE152C844F6D00C80D12 /* ModeSelection */ = {
+			isa = PBXGroup;
+			children = (
+				18735AB82C80BFF600486D28 /* ModeSelectionView.swift */,
+			);
+			path = ModeSelection;
+			sourceTree = "<group>";
+		};
+		1823CE1C2C84A5B800C80D12 /* ModesView */ = {
+			isa = PBXGroup;
+			children = (
+				1823CE1A2C8495DA00C80D12 /* NoModeView.swift */,
+				1823CE1D2C84A5D100C80D12 /* ModeOneView.swift */,
+				1823CE1F2C84A5E200C80D12 /* ModeTwoView.swift */,
+			);
+			path = ModesView;
+			sourceTree = "<group>";
+		};
+		1823CE212C84B6ED00C80D12 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1823CE162C844F8200C80D12 /* Mode.swift */,
+				18A3B0142C8B2B9200870E0C /* GameInfo.swift */,
+				18A3B01B2C8B495F00870E0C /* AlertMessage.swift */,
+				181403312C8F7F3C00E369D7 /* Logs.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		18735A9B2C80B86D00486D28 = {
+			isa = PBXGroup;
+			children = (
+				18735AA62C80B86D00486D28 /* RewindPS4_MacOS */,
+				189319C82C8B5AD30030EFE0 /* RewindPS4_MacOS.app */,
+			);
+			sourceTree = "<group>";
+		};
+		18735AA62C80B86D00486D28 /* RewindPS4_MacOS */ = {
+			isa = PBXGroup;
+			children = (
+				18735AC02C81B96000486D28 /* RewindPS4-MacOS-Info.plist */,
+				18735AA72C80B86D00486D28 /* RewindPS4_MacOSApp.swift */,
+				18735AA92C80B86D00486D28 /* ContentView.swift */,
+				1823CE222C84B80E00C80D12 /* DowngradingViewModel.swift */,
+				18A874F12C81D06F00725456 /* Fonts */,
+				18735AB52C80B91400486D28 /* Scenes */,
+				18A874FB2C81DA3600725456 /* UIComponents */,
+				189319C92C8C7F8D0030EFE0 /* Services */,
+				1823CE212C84B6ED00C80D12 /* Models */,
+				18A874F62C81D54300725456 /* Extensions */,
+				18A874FC2C81E70300725456 /* Helpers */,
+				18735AAB2C80B87A00486D28 /* Assets.xcassets */,
+				18735AAD2C80B87A00486D28 /* Preview Content */,
+			);
+			path = RewindPS4_MacOS;
+			sourceTree = "<group>";
+		};
+		18735AAD2C80B87A00486D28 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				18735AAE2C80B87A00486D28 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		18735AB52C80B91400486D28 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				1823CE072C825DFC00C80D12 /* Header */,
+				1823CE152C844F6D00C80D12 /* ModeSelection */,
+				1823CE102C838BC500C80D12 /* ProxyServer */,
+				1823CE062C825B6E00C80D12 /* ModeInfo */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		189319C92C8C7F8D0030EFE0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				189319CA2C8C7FBE0030EFE0 /* Network.swift */,
+				189319CC2C8D7ECC0030EFE0 /* Proxy.swift */,
+				189319CE2C8D925E0030EFE0 /* Mapper.swift */,
+				181403332C8F7F6E00E369D7 /* Logging.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		18A874F12C81D06F00725456 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				18A874F22C81D09A00725456 /* seiha.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		18A874F62C81D54300725456 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				18A874F72C81D55900725456 /* Font+.swift */,
+				1823CE0A2C82643C00C80D12 /* View+.swift */,
+				1823CE132C844F2400C80D12 /* CGSize+.swift */,
+				1823CE182C84809700C80D12 /* Binding+.swift */,
+				18A3B0182C8B349A00870E0C /* Image+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		18A874FB2C81DA3600725456 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				1823CE022C81F35C00C80D12 /* Views */,
+				1823CE032C81F36700C80D12 /* Buttons */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		18A874FC2C81E70300725456 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				18A874FD2C81E71B00725456 /* ImageName.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18735AA32C80B86D00486D28 /* RewindPS4_MacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18735AB22C80B87A00486D28 /* Build configuration list for PBXNativeTarget "RewindPS4_MacOS" */;
+			buildPhases = (
+				18735AA02C80B86D00486D28 /* Sources */,
+				18735AA12C80B86D00486D28 /* Frameworks */,
+				18735AA22C80B86D00486D28 /* Resources */,
+				18A874F42C81D22700725456 /* CopyFiles */,
+				181DD0F42C88A50400DB6240 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RewindPS4_MacOS;
+			packageProductDependencies = (
+				18BE15562C90D69C000AE0A6 /* RewindPS4Proxy */,
+			);
+			productName = RewindPS4_MacOS;
+			productReference = 189319C82C8B5AD30030EFE0 /* RewindPS4_MacOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18735A9C2C80B86D00486D28 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					18735AA32C80B86D00486D28 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 18735A9F2C80B86D00486D28 /* Build configuration list for PBXProject "RewindPS4_MacOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18735A9B2C80B86D00486D28;
+			packageReferences = (
+				18BE15552C90D69C000AE0A6 /* XCRemoteSwiftPackageReference "RewindPS4Proxy" */,
+			);
+			productRefGroup = 18735A9B2C80B86D00486D28;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18735AA32C80B86D00486D28 /* RewindPS4_MacOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18735AA22C80B86D00486D28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18735AAF2C80B87A00486D28 /* Preview Assets.xcassets in Resources */,
+				18735AAC2C80B87A00486D28 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18735AA02C80B86D00486D28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1823CE092C825E1900C80D12 /* DeviceView.swift in Sources */,
+				1823CE202C84A5E200C80D12 /* ModeTwoView.swift in Sources */,
+				18735AB92C80BFF600486D28 /* ModeSelectionView.swift in Sources */,
+				18A874F82C81D55900725456 /* Font+.swift in Sources */,
+				1823CDFF2C81F0A200C80D12 /* StartButton.swift in Sources */,
+				1823CE122C838BE500C80D12 /* ServerInfoView.swift in Sources */,
+				18DF17EF2C960EA600D0B31D /* SpinnerView.swift in Sources */,
+				18A3B0172C8B32F000870E0C /* GameInfoView.swift in Sources */,
+				1823CE0B2C82643C00C80D12 /* View+.swift in Sources */,
+				18A874FA2C81D98600725456 /* BackgroundView.swift in Sources */,
+				18A874FE2C81E71B00725456 /* ImageName.swift in Sources */,
+				1823CE142C844F2400C80D12 /* CGSize+.swift in Sources */,
+				189319CF2C8D925E0030EFE0 /* Mapper.swift in Sources */,
+				181403342C8F7F6E00E369D7 /* Logging.swift in Sources */,
+				18735ABD2C819F9300486D28 /* HeaderView.swift in Sources */,
+				18A3B01C2C8B495F00870E0C /* AlertMessage.swift in Sources */,
+				1823CE232C84B80E00C80D12 /* DowngradingViewModel.swift in Sources */,
+				1823CE1E2C84A5D100C80D12 /* ModeOneView.swift in Sources */,
+				181403322C8F7F3C00E369D7 /* Logs.swift in Sources */,
+				1823CE012C81F34B00C80D12 /* ModeSelectionButton.swift in Sources */,
+				18735AAA2C80B86D00486D28 /* ContentView.swift in Sources */,
+				18735ABB2C80C41600486D28 /* ModeInfoView.swift in Sources */,
+				18A3B0192C8B349A00870E0C /* Image+.swift in Sources */,
+				1823CE192C84809700C80D12 /* Binding+.swift in Sources */,
+				1823CE172C844F8200C80D12 /* Mode.swift in Sources */,
+				1823CE052C821B8E00C80D12 /* InfoLabelView.swift in Sources */,
+				18735AB72C80B92C00486D28 /* ProxyServerView.swift in Sources */,
+				189319CB2C8C7FBE0030EFE0 /* Network.swift in Sources */,
+				189319CD2C8D7ECC0030EFE0 /* Proxy.swift in Sources */,
+				18A3B0152C8B2B9200870E0C /* GameInfo.swift in Sources */,
+				18735AA82C80B86D00486D28 /* RewindPS4_MacOSApp.swift in Sources */,
+				1823CE1B2C8495DA00C80D12 /* NoModeView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		18735AB02C80B87A00486D28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		18735AB12C80B87A00486D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18735AB32C80B87A00486D28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=macosx*]" = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RewindPS4_MacOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 82LJBH6Q35;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "RewindPS4-MacOS-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = RewindPS4;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ant.kzmn.RewindPS4-MacOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		18735AB42C80B87A00486D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=macosx*]" = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RewindPS4_MacOS/Preview Content\"";
+				DEVELOPMENT_TEAM = 82LJBH6Q35;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "RewindPS4-MacOS-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = RewindPS4;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ant.kzmn.RewindPS4-MacOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18735A9F2C80B86D00486D28 /* Build configuration list for PBXProject "RewindPS4_MacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18735AB02C80B87A00486D28 /* Debug */,
+				18735AB12C80B87A00486D28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18735AB22C80B87A00486D28 /* Build configuration list for PBXNativeTarget "RewindPS4_MacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18735AB32C80B87A00486D28 /* Debug */,
+				18735AB42C80B87A00486D28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18BE15552C90D69C000AE0A6 /* XCRemoteSwiftPackageReference "RewindPS4Proxy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AuntAnt/RewindPS4Proxy.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18BE15562C90D69C000AE0A6 /* RewindPS4Proxy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18BE15552C90D69C000AE0A6 /* XCRemoteSwiftPackageReference "RewindPS4Proxy" */;
+			productName = RewindPS4Proxy;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 18735A9C2C80B86D00486D28 /* Project object */;
+}

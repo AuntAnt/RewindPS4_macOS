@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "rewindps4proxy",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AuntAnt/RewindPS4Proxy.git",
+      "state" : {
+        "revision" : "93dd9dcd9cd039aa8dd805820dc1088875f5e6d2",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}
