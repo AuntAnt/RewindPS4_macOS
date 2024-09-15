@@ -30,6 +30,7 @@ struct ModeOneView: View {
                 .multilineTextAlignment(.leading)
                 .lineLimit(4)
                 .focused($isEditing)
+                .disabled(viewModel.isServerRunning)
                 .onTapGesture {
                     isEditing = true
                 }

@@ -18,6 +18,7 @@ struct ServerInfoView: View {
         HStack {
             Text(title)
                 .foregroundStyle(.descriptionText)
+                .font(.seiha2)
             
             TextField(title, text: $value)
                 .frame(width: 200, height: 30)
@@ -31,8 +32,8 @@ struct ServerInfoView: View {
                         Stepper("", value: $value.integer, in: 0...65535).padding(.horizontal, 3)
                     }
                 }
+                .font(.seiha3)
         }
-        .font(.seiha2)
     }
 }
 

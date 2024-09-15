@@ -27,7 +27,7 @@ struct DeviceView: View {
                     Text("IP: \(viewModel.latestIp)")
                     Text("TYPE: \(viewModel.device)")
                 }
-                .font(.seiha2)
+                .font(.seiha3)
                 .foregroundStyle(.accent)
             }
         }
