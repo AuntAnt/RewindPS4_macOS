@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "18735AA32C80B86D00486D28"
-               BuildableName = "RewindPS4_MacOS.app"
-               BlueprintName = "RewindPS4_MacOS"
-               ReferencedContainer = "container:RewindPS4_MacOS.xcodeproj">
+               BuildableName = "RewindPS4_macOS.app"
+               BlueprintName = "RewindPS4_macOS"
+               ReferencedContainer = "container:RewindPS4_macOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "18735AA32C80B86D00486D28"
-            BuildableName = "RewindPS4_MacOS.app"
-            BlueprintName = "RewindPS4_MacOS"
-            ReferencedContainer = "container:RewindPS4_MacOS.xcodeproj">
+            BuildableName = "RewindPS4_macOS.app"
+            BlueprintName = "RewindPS4_macOS"
+            ReferencedContainer = "container:RewindPS4_macOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "18735AA32C80B86D00486D28"
-            BuildableName = "RewindPS4_MacOS.app"
-            BlueprintName = "RewindPS4_MacOS"
-            ReferencedContainer = "container:RewindPS4_MacOS.xcodeproj">
+            BuildableName = "RewindPS4_macOS.app"
+            BlueprintName = "RewindPS4_macOS"
+            ReferencedContainer = "container:RewindPS4_macOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

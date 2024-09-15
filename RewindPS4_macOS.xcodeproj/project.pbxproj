@@ -21,7 +21,7 @@
 		1823CE1E2C84A5D100C80D12 /* ModeOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE1D2C84A5D100C80D12 /* ModeOneView.swift */; };
 		1823CE202C84A5E200C80D12 /* ModeTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE1F2C84A5E200C80D12 /* ModeTwoView.swift */; };
 		1823CE232C84B80E00C80D12 /* DowngradingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE222C84B80E00C80D12 /* DowngradingViewModel.swift */; };
-		18735AA82C80B86D00486D28 /* RewindPS4_MacOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18735AA72C80B86D00486D28 /* RewindPS4_MacOSApp.swift */; };
+		18735AA82C80B86D00486D28 /* RewindPS4_macOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18735AA72C80B86D00486D28 /* RewindPS4_macOSApp.swift */; };
 		18735AAA2C80B86D00486D28 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18735AA92C80B86D00486D28 /* ContentView.swift */; };
 		18735AAC2C80B87A00486D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18735AAB2C80B87A00486D28 /* Assets.xcassets */; };
 		18735AAF2C80B87A00486D28 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18735AAE2C80B87A00486D28 /* Preview Assets.xcassets */; };
@@ -82,7 +82,7 @@
 		1823CE1D2C84A5D100C80D12 /* ModeOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeOneView.swift; sourceTree = "<group>"; };
 		1823CE1F2C84A5E200C80D12 /* ModeTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeTwoView.swift; sourceTree = "<group>"; };
 		1823CE222C84B80E00C80D12 /* DowngradingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DowngradingViewModel.swift; sourceTree = "<group>"; };
-		18735AA72C80B86D00486D28 /* RewindPS4_MacOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewindPS4_MacOSApp.swift; sourceTree = "<group>"; };
+		18735AA72C80B86D00486D28 /* RewindPS4_macOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewindPS4_macOSApp.swift; sourceTree = "<group>"; };
 		18735AA92C80B86D00486D28 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		18735AAB2C80B87A00486D28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18735AAE2C80B87A00486D28 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -90,8 +90,7 @@
 		18735AB82C80BFF600486D28 /* ModeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSelectionView.swift; sourceTree = "<group>"; };
 		18735ABA2C80C41600486D28 /* ModeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeInfoView.swift; sourceTree = "<group>"; };
 		18735ABC2C819F9300486D28 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		18735AC02C81B96000486D28 /* RewindPS4-MacOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "RewindPS4-MacOS-Info.plist"; sourceTree = SOURCE_ROOT; };
-		189319C82C8B5AD30030EFE0 /* RewindPS4_MacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RewindPS4_MacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18735AC02C81B96000486D28 /* RewindPS4-macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RewindPS4-macOS-Info.plist"; sourceTree = SOURCE_ROOT; };
 		189319CA2C8C7FBE0030EFE0 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		189319CC2C8D7ECC0030EFE0 /* Proxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proxy.swift; sourceTree = "<group>"; };
 		189319CE2C8D925E0030EFE0 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
@@ -104,6 +103,7 @@
 		18A874F92C81D98600725456 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		18A874FD2C81E71B00725456 /* ImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageName.swift; sourceTree = "<group>"; };
 		18DF17EE2C960EA600D0B31D /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		18DF17F42C96D44500D0B31D /* RewindPS4_macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RewindPS4_macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,16 +197,16 @@
 		18735A9B2C80B86D00486D28 = {
 			isa = PBXGroup;
 			children = (
-				18735AA62C80B86D00486D28 /* RewindPS4_MacOS */,
-				189319C82C8B5AD30030EFE0 /* RewindPS4_MacOS.app */,
+				18735AA62C80B86D00486D28 /* RewindPS4_macOS */,
+				18DF17F42C96D44500D0B31D /* RewindPS4_macOS.app */,
 			);
 			sourceTree = "<group>";
 		};
-		18735AA62C80B86D00486D28 /* RewindPS4_MacOS */ = {
+		18735AA62C80B86D00486D28 /* RewindPS4_macOS */ = {
 			isa = PBXGroup;
 			children = (
-				18735AC02C81B96000486D28 /* RewindPS4-MacOS-Info.plist */,
-				18735AA72C80B86D00486D28 /* RewindPS4_MacOSApp.swift */,
+				18735AC02C81B96000486D28 /* RewindPS4-macOS-Info.plist */,
+				18735AA72C80B86D00486D28 /* RewindPS4_macOSApp.swift */,
 				18735AA92C80B86D00486D28 /* ContentView.swift */,
 				1823CE222C84B80E00C80D12 /* DowngradingViewModel.swift */,
 				18A874F12C81D06F00725456 /* Fonts */,
@@ -219,7 +219,7 @@
 				18735AAB2C80B87A00486D28 /* Assets.xcassets */,
 				18735AAD2C80B87A00486D28 /* Preview Content */,
 			);
-			path = RewindPS4_MacOS;
+			path = RewindPS4_macOS;
 			sourceTree = "<group>";
 		};
 		18735AAD2C80B87A00486D28 /* Preview Content */ = {
@@ -291,9 +291,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		18735AA32C80B86D00486D28 /* RewindPS4_MacOS */ = {
+		18735AA32C80B86D00486D28 /* RewindPS4_macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18735AB22C80B87A00486D28 /* Build configuration list for PBXNativeTarget "RewindPS4_MacOS" */;
+			buildConfigurationList = 18735AB22C80B87A00486D28 /* Build configuration list for PBXNativeTarget "RewindPS4_macOS" */;
 			buildPhases = (
 				18735AA02C80B86D00486D28 /* Sources */,
 				18735AA12C80B86D00486D28 /* Frameworks */,
@@ -305,12 +305,12 @@
 			);
 			dependencies = (
 			);
-			name = RewindPS4_MacOS;
+			name = RewindPS4_macOS;
 			packageProductDependencies = (
 				18BE15562C90D69C000AE0A6 /* RewindPS4Proxy */,
 			);
 			productName = RewindPS4_MacOS;
-			productReference = 189319C82C8B5AD30030EFE0 /* RewindPS4_MacOS.app */;
+			productReference = 18DF17F42C96D44500D0B31D /* RewindPS4_macOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -344,7 +344,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				18735AA32C80B86D00486D28 /* RewindPS4_MacOS */,
+				18735AA32C80B86D00486D28 /* RewindPS4_macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -395,7 +395,7 @@
 				189319CB2C8C7FBE0030EFE0 /* Network.swift in Sources */,
 				189319CD2C8D7ECC0030EFE0 /* Proxy.swift in Sources */,
 				18A3B0152C8B2B9200870E0C /* GameInfo.swift in Sources */,
-				18735AA82C80B86D00486D28 /* RewindPS4_MacOSApp.swift in Sources */,
+				18735AA82C80B86D00486D28 /* RewindPS4_macOSApp.swift in Sources */,
 				1823CE1B2C8495DA00C80D12 /* NoModeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,6 +457,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -514,6 +515,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -531,7 +533,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RewindPS4_MacOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"RewindPS4_macOS/Preview Content\"";
 				DEVELOPMENT_TEAM = 82LJBH6Q35;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -571,7 +573,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RewindPS4_MacOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"RewindPS4_macOS/Preview Content\"";
 				DEVELOPMENT_TEAM = 82LJBH6Q35;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -614,7 +616,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18735AB22C80B87A00486D28 /* Build configuration list for PBXNativeTarget "RewindPS4_MacOS" */ = {
+		18735AB22C80B87A00486D28 /* Build configuration list for PBXNativeTarget "RewindPS4_macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18735AB32C80B87A00486D28 /* Debug */,
