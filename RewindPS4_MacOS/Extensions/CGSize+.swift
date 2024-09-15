@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+extension CGSize {
+    init(square: CGFloat) {
+        self.init(width: square, height: square)
+    }
+}

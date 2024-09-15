@@ -9,48 +9,49 @@ import SwiftUI
 
 struct ModeOneView: View {
     
-    @State private var jsonLink: String = ""
+    @EnvironmentObject private var viewModel: DowngradingViewModel
+    @FocusState private var isEditing: Bool
     
     var body: some View {
         VStack {
             HStack {
-                Text("Please enter the JSON link:")
+                Text(viewModel.inputMessage)
                     .foregroundStyle(.title)
-                .font(.title2)
+                    .font(.title2)
                 
                 Spacer()
             }
             
-            TextField("", text: $jsonLink, axis: .vertical)
-                .placeholder("", when: jsonLink.isEmpty)
+            TextField("", text: $viewModel.jsonLink, axis: .vertical)
                 .foregroundStyle(.infoText)
                 .frame(height: 55)
                 .textFieldStyle(PlainTextFieldStyle())
                 .padding(.horizontal, 4)
                 .multilineTextAlignment(.leading)
                 .lineLimit(4)
-                .border(Color.gray)
-            
-            HStack {
-                Image(ImageName.waiting)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(minWidth: 180, idealWidth: 180, maxWidth: 210, minHeight: 180, idealHeight: 180, maxHeight: 400)
-                
-                Spacer().frame(width: 15)
-                
-                VStack(alignment: .leading, spacing: 0) {
-                    InfoLabelView(title: "Game Name:", value: "Waiting...")
-                    InfoLabelView(title: "Game ID & Region:", value: "Waiting...")
-                    InfoLabelView(title: "Last Version:", value: "Waiting...")
-                    InfoLabelView(title: "Downgrade Version:", value: "Waiting...")
+                .focused($isEditing)
+                .onTapGesture {
+                    isEditing = true
                 }
-                .foregroundStyle(.descriptionText)
+                .overlay {
+                    RoundedRectangle(cornerSize: CGSize(square: 10))
+                        .stroke(lineWidth: 1)
+                        .foregroundStyle(Color.gray)
+                        .shadow(color: .white, radius: isEditing ? 5 : 0)
+                }
+                .onReceive(viewModel.$jsonLink.debounce(for: .seconds(1), scheduler: DispatchQueue.main)) { _ in
+                    Task {
+                        await viewModel.validateInput()
+                    }
+                }
+            
+            GameInfoView(gameInfo: $viewModel.gameInfo)
+        }
+        .overlay(alignment: .center) {
+            if viewModel.isGameInfoLoading {
+                SpinnerView()
             }
         }
-        .padding()
-        .border(.gray)
-        .padding()
     }
 }
 

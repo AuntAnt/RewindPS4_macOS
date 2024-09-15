@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ModeTwoView: View {
+    
+    @EnvironmentObject private var viewModel: DowngradingViewModel
+    
     var body: some View {
         VStack {
             HStack {
@@ -27,6 +30,9 @@ struct ModeTwoView: View {
             Image(ImageName.blockUpdates)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+        }
+        .onAppear {
+            viewModel.gameInfo = nil
         }
     }
 }

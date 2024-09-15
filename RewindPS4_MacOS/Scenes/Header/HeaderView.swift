@@ -17,18 +17,7 @@ struct HeaderView: View {
             
             Spacer()
             
-            VStack(alignment: .leading, spacing: 10) {
-                Text("Connected Device")
-                    .font(.seiha1)
-                    .foregroundStyle(.title)
-                
-                HStack {
-                    Text("IP: Waiting")
-                    Text("TYPE: Waiting")
-                }
-                .font(.seiha2)
-                .foregroundStyle(.accent)
-            }
+            DeviceView()
         }
     }
 }

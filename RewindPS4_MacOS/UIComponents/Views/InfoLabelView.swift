@@ -10,7 +10,7 @@ import SwiftUI
 struct InfoLabelView: View {
     
     let title: String
-    @State var value: String
+    @Binding var value: String
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -39,6 +39,6 @@ struct InfoLabelView: View {
 }
 
 #Preview {
-    InfoLabelView(title: "Game Name:", value: "N/A")
+    InfoLabelView(title: "Game Name:", value: Binding.constant("Waiting..."))
         .padding()
 }

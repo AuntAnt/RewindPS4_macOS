@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+struct GameInfo {
+    let id: String
+    let title: String
+    let region: String
+    let lastVersion: String
+    let downgradeVersion: String
+    var imageCover: String?
+    
+    var cusa: String {
+        return "\(id) - \(region)"
+    }
+}

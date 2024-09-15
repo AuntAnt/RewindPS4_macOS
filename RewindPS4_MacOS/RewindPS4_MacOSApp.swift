@@ -12,6 +12,8 @@ struct RewindPS4_MacOSApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .frame(width: 1000, height: 800)
         }
+        .windowResizability(.contentSize)
     }
 }

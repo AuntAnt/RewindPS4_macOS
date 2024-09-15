@@ -11,7 +11,7 @@ import RewindPS4Proxy
 @MainActor
 final class DowngradingViewModel: ObservableObject {
     
-    // MARK: - Connected client
+    // MARK: - Connected client and logs
     
     @Published var latestIp = "Waiting"
     @Published var device = "Waiting"
@@ -33,7 +33,8 @@ final class DowngradingViewModel: ObservableObject {
     @Published var jsonLink = ""
     @Published var inputMessage = "Please enter the JSON link:"
     @Published var gameInfo: GameInfo?
-    
+    @Published var isGameInfoLoading = false
+     
     // MARK: - Server
     
     @Published var localIp = ""
@@ -41,7 +42,7 @@ final class DowngradingViewModel: ObservableObject {
     @Published var isError = false
     @Published var buttonLabel: StartButtonLabel = .start
     @Published var serverStateLabel: ServerStateLabel = .notRunning
-    @Published var alertMessage: AlertMessage?
+    @Published var alertMessage: String?
     @Published var isServerRunning = false
     
     // MARK: - Dependency
@@ -68,10 +69,10 @@ final class DowngradingViewModel: ObservableObject {
         }
         
         if network.isValidInput(jsonLink: jsonLink) {
-            inputMessage = "☺️ JSON link is correct!"
+            inputMessage = "☺️ JSON link is correct"
             await setMode()
         } else {
-            inputMessage = "😢 JSON link is not correct"
+            inputMessage = "😢 JSON link is incorrect"
             gameInfo = nil
         }
     }
@@ -92,15 +93,15 @@ final class DowngradingViewModel: ObservableObject {
         if currentMode == .mode0 {
             isError = true
             serverStateLabel = .notRunning
-            alertMessage = .selectMode
+            alertMessage = AlertMessage.selectMode.rawValue
         } else if currentMode == .mode1, !network.isValidInput(jsonLink: jsonLink) {
             isError = true
             serverStateLabel = .notRunning
-            alertMessage = .enterJson
+            alertMessage = AlertMessage.enterJson.rawValue
         } else if network.isOccupied(port: port) {
             isError = true
             serverStateLabel = .notRunning
-            alertMessage = .portUsed
+            alertMessage = AlertMessage.portUsed.rawValue
         } else {
             proxy.startProxy(on: port)
             isServerRunning = true
@@ -126,15 +127,17 @@ final class DowngradingViewModel: ObservableObject {
     
     private func setMode() async {
         guard !isServerRunning else {
-            // TODO: - message to user that server is busy
             return
         }
         
+        isGameInfoLoading = true
+        
         do {
             gameInfo = try await proxy.setMode(currentMode, jsonLink)
+            isGameInfoLoading = false
         } catch {
-            // TODO: - handle
-            print(error.localizedDescription)
+            isError = true
+            alertMessage = error.localizedDescription
         }
     }
     
@@ -153,19 +156,6 @@ final class DowngradingViewModel: ObservableObject {
                         ? self.proxy.detectConnectedDevice(result.latestClientUserAgent)
                         : "Waiting"
                 }
-                
-                
-                
-//                let result = try? await self.logging.fetchClientStatus()
-//                
-//                if let result {
-//                    await MainActor.run {
-//                        self.latestIp = result.clientActive ? result.latestClientIP : "Waiting"
-//                        self.device = result.clientActive
-//                            ? self.proxy.detectConnectedDevice(result.latestClientUserAgent)
-//                            : "Waiting"
-//                    }
-//                }
             }
         }
     }

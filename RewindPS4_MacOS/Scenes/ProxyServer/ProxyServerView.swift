@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ProxyServerView: View {
     
-    @State private var port = "8080"
-    @State private var serverStateLabel = "Server is not running"
+    @EnvironmentObject private var viewModel: DowngradingViewModel
     
     var body: some View {
         VStack {
@@ -23,15 +22,29 @@ struct ProxyServerView: View {
             }
             
             VStack(alignment: .trailing) {
-                ServerInfoView(title: "Local IP:", text: "192.168.99.191")
-                ServerInfoView(title: "Port:", text: "8080")
+                // Local IP view
+                ServerInfoView(title: "Local IP:", isEditable: .constant(false), value: $viewModel.localIp)
+                
+                // Port view
+                ServerInfoView(
+                    title: "Port:",
+                    isEditable: $viewModel.isServerRunning.not,
+                    isStepperNeeded: true,
+                    value: $viewModel.port
+                )
             }
             
-            Text(serverStateLabel)
-                .foregroundStyle(.white)
+            Text(viewModel.serverStateLabel.rawValue)
+                .font(.title3)
+                .foregroundStyle(viewModel.isServerRunning ? .accent : .white)
                 .padding()
             
-            StartButton()
+            StartButton(title: $viewModel.buttonLabel) {
+                viewModel.toggleServer()
+            }
+        }
+        .alert("Error", isPresented: $viewModel.isError, actions: {}) {
+            Text(viewModel.alertMessage ?? "")
         }
         .padding()
         .border(.gray, width: 1)
@@ -40,7 +53,5 @@ struct ProxyServerView: View {
 
 #Preview {
     ProxyServerView()
-        .background {
-            BackgroundView()
-        }
+        .preferredColorScheme(.dark)
 }

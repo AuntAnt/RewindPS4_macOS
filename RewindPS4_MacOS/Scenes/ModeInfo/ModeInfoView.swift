@@ -9,22 +9,27 @@ import SwiftUI
 
 struct ModeInfoView: View {
     
-    @State private var modeSelected = true
+    @EnvironmentObject private var viewModel: DowngradingViewModel
     
     var body: some View {
-        if modeSelected {
-            ModeOneView()
-        } else {
-            NoModePlaceholderView()
-                .padding()
-                .border(.gray)
-                .padding()
+        VStack {
+            switch viewModel.currentMode {
+            case .mode0:
+                NoModeView()
+            case .mode1:
+                ModeOneView()
+            case .mode2:
+                ModeTwoView()
+            }
         }
-        
+        .padding()
+        .border(.gray)
+        .padding()
     }
 }
 
 #Preview {
     ModeInfoView()
+        .environmentObject(DowngradingViewModel())
         .preferredColorScheme(.dark)
 }

@@ -13,7 +13,6 @@
 		1823CE012C81F34B00C80D12 /* ModeSelectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE002C81F34B00C80D12 /* ModeSelectionButton.swift */; };
 		1823CE052C821B8E00C80D12 /* InfoLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE042C821B8E00C80D12 /* InfoLabelView.swift */; };
 		1823CE092C825E1900C80D12 /* DeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE082C825E1900C80D12 /* DeviceView.swift */; };
-		1823CE0B2C82643C00C80D12 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE0A2C82643C00C80D12 /* View+.swift */; };
 		1823CE122C838BE500C80D12 /* ServerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE112C838BE500C80D12 /* ServerInfoView.swift */; };
 		1823CE142C844F2400C80D12 /* CGSize+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE132C844F2400C80D12 /* CGSize+.swift */; };
 		1823CE172C844F8200C80D12 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE162C844F8200C80D12 /* Mode.swift */; };
@@ -75,7 +74,6 @@
 		1823CE002C81F34B00C80D12 /* ModeSelectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSelectionButton.swift; sourceTree = "<group>"; };
 		1823CE042C821B8E00C80D12 /* InfoLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLabelView.swift; sourceTree = "<group>"; };
 		1823CE082C825E1900C80D12 /* DeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceView.swift; sourceTree = "<group>"; };
-		1823CE0A2C82643C00C80D12 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		1823CE112C838BE500C80D12 /* ServerInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerInfoView.swift; sourceTree = "<group>"; };
 		1823CE132C844F2400C80D12 /* CGSize+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+.swift"; sourceTree = "<group>"; };
 		1823CE162C844F8200C80D12 /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
@@ -266,7 +264,6 @@
 			isa = PBXGroup;
 			children = (
 				18A874F72C81D55900725456 /* Font+.swift */,
-				1823CE0A2C82643C00C80D12 /* View+.swift */,
 				1823CE132C844F2400C80D12 /* CGSize+.swift */,
 				1823CE182C84809700C80D12 /* Binding+.swift */,
 				18A3B0182C8B349A00870E0C /* Image+.swift */,
@@ -331,7 +328,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 18735A9F2C80B86D00486D28 /* Build configuration list for PBXProject "RewindPS4_MacOS" */;
+			buildConfigurationList = 18735A9F2C80B86D00486D28 /* Build configuration list for PBXProject "RewindPS4_macOS" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -377,7 +374,6 @@
 				1823CE122C838BE500C80D12 /* ServerInfoView.swift in Sources */,
 				18DF17EF2C960EA600D0B31D /* SpinnerView.swift in Sources */,
 				18A3B0172C8B32F000870E0C /* GameInfoView.swift in Sources */,
-				1823CE0B2C82643C00C80D12 /* View+.swift in Sources */,
 				18A874FA2C81D98600725456 /* BackgroundView.swift in Sources */,
 				18A874FE2C81E71B00725456 /* ImageName.swift in Sources */,
 				1823CE142C844F2400C80D12 /* CGSize+.swift in Sources */,
@@ -609,7 +605,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		18735A9F2C80B86D00486D28 /* Build configuration list for PBXProject "RewindPS4_MacOS" */ = {
+		18735A9F2C80B86D00486D28 /* Build configuration list for PBXProject "RewindPS4_macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				18735AB02C80B87A00486D28 /* Debug */,

@@ -9,22 +9,28 @@ import SwiftUI
 
 struct StartButton: View {
     
-    private enum StateLabels {
-        static let start = "Stop Server"
-        static let stop = "Start Server"
-    }
+    @Binding var title: StartButtonLabel
+    var action: () -> Void
     
-    @State private var title = StateLabels.start
-    @State private var isRunning = false
-    
-    var body: some View {
-        Button(title) {
-            toggleServer()
-        }
+    var body: some View {        
+        Rectangle()
+            .frame(minWidth: 200, idealWidth: 400, maxWidth: 400, minHeight: 50, idealHeight: 50, maxHeight: 50)
+            .overlay {
+                Text(title.rawValue)
+                    .foregroundStyle(.white)
+                    .font(.title2)
+            }
+            .foregroundStyle(.black)
+            .border(.accent, width: 1)
+            .onTapGesture {
+                action()
+            }
+            .shadow(color: .accent, radius: 3)
     }
-    
-    private func toggleServer() {
-        isRunning.toggle()
-        title = isRunning ? StateLabels.stop : StateLabels.start
-    }
+}
+
+#Preview {
+    StartButton(title: .constant(.start)) {}
+        .preferredColorScheme(.dark)
+        .padding()
 }
