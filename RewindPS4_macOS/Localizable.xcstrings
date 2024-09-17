@@ -3,6 +3,12 @@
   "strings" : {
     "" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -13,6 +19,12 @@
     },
     "😊 JSON link is correct" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "😊 JSONリンクが正しい"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -23,6 +35,12 @@
     },
     "😬 JSON link is incorrect" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "😬 JSONリンクが正しくありません"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -33,6 +51,12 @@
     },
     "1.Block the update server to bypass patch detection and download only the version 1.0 of the game." : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1.更新サーバーをブロックし、パッチ検出を回避し、1.0バージョンのゲームのみをダウンロードします。"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -42,10 +66,29 @@
       }
     },
     "1.Log error'Failed to start proxy server, please try another PORT. Try a few ports or restart the computer." : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1.ログエラー Failed to start proxy server, please try another PORT 、いくつかのポートを試すか、コンピュータを再起動してください。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1.日志报错 Failed to start proxy server, please try another PORT ,多换几次端口，或重启电脑再试。"
+          }
+        }
+      }
     },
     "2.Due to certain reasons, this mode is only applicable for PS4. Using it on PS5 may result in downloading the latest version or an error code NW-102650-4." : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2.いくつかの理由から、このモードはPS4でのみ使用できます。PS5でこのモードを使用すると、最新バージョンがダウンロードされるか、エラーコードNW-102650-4が表示されます。"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -55,10 +98,29 @@
       }
     },
     "2.The local IP is not the correct segment, check if the computer has a virtual NIC, if it does, temporarily disable it." : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2.ローカルIPが正しいセグメントを表示していない場合、仮想NICが存在するかどうかを確認し、存在する場合は一時的に無効にしてください。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2.本地IP显示的不是正确的网段，这时候检查电脑是不是存在虚拟网卡，如果有，请暂时禁用。"
+          }
+        }
+      }
     },
     "Block the update server to prevent game updates, download version 1.0 of the PS4 game (only applicable to PS4 consoles)" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アップデートサーバーをブロックしてゲームのアップデートを防ぎ、PS4ゲームのバージョン1.0をダウンロードします（PS4にのみ適用）"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -68,10 +130,29 @@
       }
     },
     "Blocked by update, please try again" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更新のブロックによりネットワークエラーが発生する可能性があります。何度かダウンロードを試みてください。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "屏蔽更新可能造成的网络错误，请多次尝试下载"
+          }
+        }
+      }
     },
     "Connected Device" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "接続済みデバイス"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -82,6 +163,12 @@
     },
     "Downgrade Version:" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ダウングレードバージョン"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -92,6 +179,12 @@
     },
     "Encountered a special game that cannot be downgraded. Such games have a smaller size after a certain update, so they cannot be downgraded on PS5, only on PS4, like SKUL HERO SLAYER,SYPHON FILTER 3. Refer to the user guide for details." : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "特定のダウングレードできないゲームに遭遇しました。このようなゲームは、ある更新後に容量が元より小さくなったため、PS5ではダウングレードできず、PS4でのみダウングレード可能です。詳細は使用ガイドを参照してください。"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -102,6 +195,12 @@
     },
     "Enter the patch link to download the specified version of the PS4 game (applicable to PS4/PS5 consoles)" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "パッチリンクを入力して、指定されたバージョンのPS4ゲームをダウンロードします（PS4/PS5に適用）"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -112,6 +211,12 @@
     },
     "Error" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "エラー"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -122,6 +227,12 @@
     },
     "Game ID & Region:" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ゲームIDと地域"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -132,6 +243,12 @@
     },
     "Game Name:" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ゲーム名"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -142,6 +259,12 @@
     },
     "INTRODUCE" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "紹介"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -151,10 +274,29 @@
       }
     },
     "IP: " : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "IP:"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "IP:"
+          }
+        }
+      }
     },
     "Last Version:" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最新バージョン"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -165,6 +307,12 @@
     },
     "Local IP" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ローカルIP"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -175,6 +323,12 @@
     },
     "LOG" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ログ"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -185,6 +339,12 @@
     },
     "MODE-1" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "モード-1"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -195,6 +355,12 @@
     },
     "MODE-2" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "モード-2"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -205,6 +371,12 @@
     },
     "No logs available" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "利用可能なログがありません"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -214,10 +386,29 @@
       }
     },
     "Other problems" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "その他の問題"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "其他问题"
+          }
+        }
+      }
     },
     "Please enter JSON link:" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "JSONリンクを入力してください："
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -228,6 +419,12 @@
     },
     "Please enter the correct JSON link" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "JSONリンクを入力"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -238,6 +435,12 @@
     },
     "Please enter the JSON link:" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "JSONリンクを入力してください："
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -248,6 +451,12 @@
     },
     "Please select any mode" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "モードを選択してください"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -258,6 +467,12 @@
     },
     "PORT" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ポート番号"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -268,6 +483,12 @@
     },
     "Port is occupied, please enter a new port (1024-65535)" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ポートが使用中です、変更してください(1024-65535)"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -278,6 +499,12 @@
     },
     "PROXY SERVER" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プロキシサーバー"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -287,10 +514,29 @@
       }
     },
     "PS4 update server address is blocked by DNS error." : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PS4更新サーバーがDNSエラーで接続できません。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PS4更新服务器地址被DNS错误解析。"
+          }
+        }
+      }
     },
     "SEE FAQ" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "よくある使用問題"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -301,6 +547,12 @@
     },
     "Server is not running" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サーバーが実行されていません"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -311,6 +563,12 @@
     },
     "Server is running" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サーバーが実行中です"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -320,10 +578,29 @@
       }
     },
     "Start failed, close other programs to avoid network conflicts, or change port" : {
-
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "起動失敗。他のプログラムを終了してネットワークの競合を避けるか、ポートを変更してください。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "启动失败，关闭其他程序避免网络冲突，或更换端口 "
+          }
+        }
+      }
     },
     "Start Proxy" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プロキシを開始"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -334,6 +611,12 @@
     },
     "Stop Proxy" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プロキシを停止"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -344,6 +627,12 @@
     },
     "The game's CUSA ID does not match(different version). For example, trying to download the EU version but entering the US version JSON." : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ゲームのCUSA IDが一致しません。例えば、JP版をダウンロードする場合にUS版のjsonを入力した場合。"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -354,6 +643,12 @@
     },
     "TYPE: " : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デバイス"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -364,6 +659,12 @@
     },
     "TYPE: %@" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デバイス %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -374,6 +675,12 @@
     },
     "Unable to connect to the PS4 game update server (this error prevents PS5 from downloading version 1.0)" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PS4ゲーム更新サーバーに接続できません（このエラーによりPS5はバージョン1.0をダウンロードできません）"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -384,6 +691,12 @@
     },
     "Unable to connect to the PS4 game update server, check update failed" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PS4ゲーム更新サーバーに接続できず、更新の検出に失敗しました"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -394,6 +707,12 @@
     },
     "User Guide" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用ガイド"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -404,6 +723,12 @@
     },
     "Waiting" : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "待機中"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -414,6 +739,12 @@
     },
     "Waiting..." : {
       "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "待機中"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
