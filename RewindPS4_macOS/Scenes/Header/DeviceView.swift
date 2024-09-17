@@ -19,13 +19,19 @@ struct DeviceView: View {
                 .frame(minWidth: 400, idealWidth: 400, maxWidth: 400, minHeight: 100, idealHeight: 100, maxHeight: 100)
             
             VStack(alignment: .leading, spacing: 10) {
-                Text("Connected Device")
+                Text(LocalizationKeys.connected.rawValue)
                     .font(.seiha1)
                     .foregroundStyle(.title)
                 
                 HStack(spacing: 50) {
-                    Text("IP: \(viewModel.latestIp)")
-                    Text("TYPE: \(viewModel.device)")
+                    HStack(spacing: 5) {
+                        Text("IP: ")
+                        Text(LocalizedStringKey(viewModel.latestIp))
+                    }
+                    HStack(spacing: 5) {
+                        Text("TYPE: ")
+                        Text(LocalizedStringKey(viewModel.device))
+                    }
                 }
                 .font(.seiha3)
                 .foregroundStyle(.accent)

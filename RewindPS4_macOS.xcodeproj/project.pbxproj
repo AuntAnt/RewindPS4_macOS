@@ -35,12 +35,15 @@
 		18A3B0152C8B2B9200870E0C /* GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3B0142C8B2B9200870E0C /* GameInfo.swift */; };
 		18A3B0172C8B32F000870E0C /* GameInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3B0162C8B32F000870E0C /* GameInfoView.swift */; };
 		18A3B0192C8B349A00870E0C /* Image+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3B0182C8B349A00870E0C /* Image+.swift */; };
-		18A3B01C2C8B495F00870E0C /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3B01B2C8B495F00870E0C /* AlertMessage.swift */; };
 		18A874F52C81D24F00725456 /* seiha.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 18A874F22C81D09A00725456 /* seiha.ttf */; };
 		18A874F82C81D55900725456 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A874F72C81D55900725456 /* Font+.swift */; };
 		18A874FA2C81D98600725456 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A874F92C81D98600725456 /* BackgroundView.swift */; };
 		18A874FE2C81E71B00725456 /* ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A874FD2C81E71B00725456 /* ImageName.swift */; };
 		18BE15572C90D69C000AE0A6 /* RewindPS4Proxy in Frameworks */ = {isa = PBXBuildFile; productRef = 18BE15562C90D69C000AE0A6 /* RewindPS4Proxy */; };
+		18D1B2FF2C98416A006B3E1E /* GuideLinkLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1B2FE2C98416A006B3E1E /* GuideLinkLabel.swift */; };
+		18D1B3012C9841A6006B3E1E /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1B3002C9841A6006B3E1E /* Links.swift */; };
+		18D1B3062C9880BE006B3E1E /* LocalizationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1B3052C9880BE006B3E1E /* LocalizationKeys.swift */; };
+		18D1B31F2C98BE2F006B3E1E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 18D1B31E2C98BE2F006B3E1E /* Localizable.xcstrings */; };
 		18DF17EF2C960EA600D0B31D /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF17EE2C960EA600D0B31D /* SpinnerView.swift */; };
 /* End PBXBuildFile section */
 
@@ -97,11 +100,14 @@
 		18A3B0142C8B2B9200870E0C /* GameInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfo.swift; sourceTree = "<group>"; };
 		18A3B0162C8B32F000870E0C /* GameInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoView.swift; sourceTree = "<group>"; };
 		18A3B0182C8B349A00870E0C /* Image+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+.swift"; sourceTree = "<group>"; };
-		18A3B01B2C8B495F00870E0C /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
 		18A874F22C81D09A00725456 /* seiha.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = seiha.ttf; sourceTree = "<group>"; };
 		18A874F72C81D55900725456 /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		18A874F92C81D98600725456 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		18A874FD2C81E71B00725456 /* ImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageName.swift; sourceTree = "<group>"; };
+		18D1B2FE2C98416A006B3E1E /* GuideLinkLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideLinkLabel.swift; sourceTree = "<group>"; };
+		18D1B3002C9841A6006B3E1E /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		18D1B3052C9880BE006B3E1E /* LocalizationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationKeys.swift; sourceTree = "<group>"; };
+		18D1B31E2C98BE2F006B3E1E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		18DF17EE2C960EA600D0B31D /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		18DF17F42C96D44500D0B31D /* RewindPS4_macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RewindPS4_macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -124,6 +130,7 @@
 				1823CE042C821B8E00C80D12 /* InfoLabelView.swift */,
 				18A874F92C81D98600725456 /* BackgroundView.swift */,
 				18DF17EE2C960EA600D0B31D /* SpinnerView.swift */,
+				18D1B2FE2C98416A006B3E1E /* GuideLinkLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,7 +195,6 @@
 			children = (
 				1823CE162C844F8200C80D12 /* Mode.swift */,
 				18A3B0142C8B2B9200870E0C /* GameInfo.swift */,
-				18A3B01B2C8B495F00870E0C /* AlertMessage.swift */,
 				181403312C8F7F3C00E369D7 /* Logs.swift */,
 			);
 			path = Models;
@@ -206,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				18735AC02C81B96000486D28 /* RewindPS4-macOS-Info.plist */,
+				18D1B31E2C98BE2F006B3E1E /* Localizable.xcstrings */,
 				18735AA72C80B86D00486D28 /* RewindPS4_macOSApp.swift */,
 				18735AA92C80B86D00486D28 /* ContentView.swift */,
 				1823CE222C84B80E00C80D12 /* DowngradingViewModel.swift */,
@@ -283,7 +290,9 @@
 		18A874FC2C81E70300725456 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				18D1B3052C9880BE006B3E1E /* LocalizationKeys.swift */,
 				18A874FD2C81E71B00725456 /* ImageName.swift */,
+				18D1B3002C9841A6006B3E1E /* Links.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -335,6 +344,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 18735A9B2C80B86D00486D28;
 			packageReferences = (
@@ -356,6 +366,7 @@
 			files = (
 				18735AAF2C80B87A00486D28 /* Preview Assets.xcassets in Resources */,
 				18735AAC2C80B87A00486D28 /* Assets.xcassets in Resources */,
+				18D1B31F2C98BE2F006B3E1E /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,10 +388,10 @@
 				18A874FA2C81D98600725456 /* BackgroundView.swift in Sources */,
 				18A874FE2C81E71B00725456 /* ImageName.swift in Sources */,
 				1823CE142C844F2400C80D12 /* CGSize+.swift in Sources */,
+				18D1B2FF2C98416A006B3E1E /* GuideLinkLabel.swift in Sources */,
 				189319CF2C8D925E0030EFE0 /* Mapper.swift in Sources */,
 				181403342C8F7F6E00E369D7 /* Logging.swift in Sources */,
 				18735ABD2C819F9300486D28 /* HeaderView.swift in Sources */,
-				18A3B01C2C8B495F00870E0C /* AlertMessage.swift in Sources */,
 				1823CE232C84B80E00C80D12 /* DowngradingViewModel.swift in Sources */,
 				1823CE1E2C84A5D100C80D12 /* ModeOneView.swift in Sources */,
 				181403322C8F7F3C00E369D7 /* Logs.swift in Sources */,
@@ -393,9 +404,11 @@
 				1823CE052C821B8E00C80D12 /* InfoLabelView.swift in Sources */,
 				18735AB72C80B92C00486D28 /* ProxyServerView.swift in Sources */,
 				189319CB2C8C7FBE0030EFE0 /* Network.swift in Sources */,
+				18D1B3012C9841A6006B3E1E /* Links.swift in Sources */,
 				189319CD2C8D7ECC0030EFE0 /* Proxy.swift in Sources */,
 				18A3B0152C8B2B9200870E0C /* GameInfo.swift in Sources */,
 				18735AA82C80B86D00486D28 /* RewindPS4_macOSApp.swift in Sources */,
+				18D1B3062C9880BE006B3E1E /* LocalizationKeys.swift in Sources */,
 				1823CE1B2C8495DA00C80D12 /* NoModeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

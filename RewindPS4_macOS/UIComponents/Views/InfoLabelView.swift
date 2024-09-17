@@ -9,8 +9,8 @@ import SwiftUI
 
 struct InfoLabelView: View {
     
-    let title: String
-    @Binding var value: String
+    let title: LocalizedStringKey
+    @Binding var value: String?
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -28,8 +28,13 @@ struct InfoLabelView: View {
                 .overlay(alignment: .leading) {
                     HStack {
                         Spacer().frame(width: 3)
-                        Text(value)
-                            .foregroundStyle(.accent)
+                        if let value {
+                            Text(value)
+                                .foregroundStyle(.accent)
+                        } else {
+                            Text(LocalizationKeys.waitingInfo.rawValue)
+                                .foregroundStyle(.accent)
+                        }
                     }
                 }
                 .foregroundStyle(.black.opacity(0.4))
@@ -39,6 +44,6 @@ struct InfoLabelView: View {
 }
 
 #Preview {
-    InfoLabelView(title: "Game Name:", value: Binding.constant("Waiting..."))
+    InfoLabelView(title: "Game Name:", value: .constant("Waiting..."))
         .padding()
 }

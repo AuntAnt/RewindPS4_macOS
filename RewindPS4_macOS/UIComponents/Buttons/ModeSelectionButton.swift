@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ModeSelectionButton: View {
     
-    let title: String
-    let description: String
+    let title: LocalizedStringKey
+    let description: LocalizedStringKey
     let isSelected: Bool
     var isEnable: Bool
     var action: () -> Void
@@ -47,7 +47,7 @@ struct ModeSelectionButton: View {
 
 #Preview {
     ModeSelectionButton(
-        title: "MODE 1",
+        title: "MODE-1",
         description: "The long button description that describe what the selected mode do, which consoles supported and other things",
         isSelected: false, 
         isEnable: true,

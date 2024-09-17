@@ -9,14 +9,14 @@ import SwiftUI
 
 struct StartButton: View {
     
-    @Binding var title: StartButtonLabel
+    @Binding var title: LocalizedStringKey
     var action: () -> Void
     
     var body: some View {        
         Rectangle()
             .frame(minWidth: 200, idealWidth: 400, maxWidth: 400, minHeight: 50, idealHeight: 50, maxHeight: 50)
             .overlay {
-                Text(title.rawValue)
+                Text(title)
                     .foregroundStyle(.white)
                     .font(.title2)
             }
@@ -30,7 +30,7 @@ struct StartButton: View {
 }
 
 #Preview {
-    StartButton(title: .constant(.start)) {}
+    StartButton(title: .constant(LocalizationKeys.startProxy.rawValue)) {}
         .preferredColorScheme(.dark)
         .padding()
 }

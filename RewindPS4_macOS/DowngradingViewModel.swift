@@ -31,7 +31,7 @@ final class DowngradingViewModel: ObservableObject {
     // MARK: - Mode info
     
     @Published var jsonLink = ""
-    @Published var inputMessage = "Please enter the JSON link:"
+    @Published var inputMessage = LocalizationKeys.enterJSONLink.rawValue
     @Published var gameInfo: GameInfo?
     @Published var isGameInfoLoading = false
      
@@ -40,9 +40,9 @@ final class DowngradingViewModel: ObservableObject {
     @Published var localIp = ""
     @Published var port = "8080"
     @Published var isError = false
-    @Published var buttonLabel: StartButtonLabel = .start
-    @Published var serverStateLabel: ServerStateLabel = .notRunning
-    @Published var alertMessage: String?
+    @Published var buttonLabel = LocalizationKeys.startProxy.rawValue
+    @Published var serverStateLabel = LocalizationKeys.notRunning.rawValue
+    @Published var alertMessage: LocalizedStringKey?
     @Published var isServerRunning = false
     
     // MARK: - Dependency
@@ -63,16 +63,16 @@ final class DowngradingViewModel: ObservableObject {
     
     func validateInput() async {
         guard !jsonLink.isEmpty else {
-            inputMessage = "Please enter the JSON link:"
+            inputMessage = LocalizationKeys.enterJSONLink.rawValue
             gameInfo = nil
             return
         }
         
         if network.isValidInput(jsonLink: jsonLink) {
-            inputMessage = "☺️ JSON link is correct"
+            inputMessage = LocalizationKeys.jsonCorrect.rawValue
             await setMode()
         } else {
-            inputMessage = "😢 JSON link is incorrect"
+            inputMessage = LocalizationKeys.jsonError.rawValue
             gameInfo = nil
         }
     }
@@ -92,21 +92,21 @@ final class DowngradingViewModel: ObservableObject {
     private func startProxy() {
         if currentMode == .mode0 {
             isError = true
-            serverStateLabel = .notRunning
-            alertMessage = AlertMessage.selectMode.rawValue
+            serverStateLabel = LocalizationKeys.notRunning.rawValue
+            alertMessage = LocalizationKeys.pleaseSelectAnyMode.rawValue
         } else if currentMode == .mode1, !network.isValidInput(jsonLink: jsonLink) {
             isError = true
-            serverStateLabel = .notRunning
-            alertMessage = AlertMessage.enterJson.rawValue
+            serverStateLabel = LocalizationKeys.notRunning.rawValue
+            alertMessage = LocalizationKeys.alertIncorrectJson.rawValue
         } else if network.isOccupied(port: port) {
             isError = true
-            serverStateLabel = .notRunning
-            alertMessage = AlertMessage.portUsed.rawValue
+            serverStateLabel = LocalizationKeys.notRunning.rawValue
+            alertMessage = LocalizationKeys.portUsed.rawValue
         } else {
             proxy.startProxy(on: port)
             isServerRunning = true
-            buttonLabel = .stop
-            serverStateLabel = .running
+            buttonLabel = LocalizationKeys.stopProxy.rawValue
+            serverStateLabel = LocalizationKeys.running.rawValue
             Task {
                 await fetchConnectedClient()
             }
@@ -121,8 +121,8 @@ final class DowngradingViewModel: ObservableObject {
         stopFetchingLogs()
         proxy.stopProxy()
         isServerRunning = false
-        buttonLabel = .start
-        serverStateLabel = .notRunning
+        buttonLabel = LocalizationKeys.startProxy.rawValue
+        serverStateLabel = LocalizationKeys.notRunning.rawValue
     }
     
     private func setMode() async {
@@ -137,7 +137,7 @@ final class DowngradingViewModel: ObservableObject {
             isGameInfoLoading = false
         } catch {
             isError = true
-            alertMessage = error.localizedDescription
+            alertMessage = LocalizedStringKey(error.localizedDescription) 
         }
     }
     

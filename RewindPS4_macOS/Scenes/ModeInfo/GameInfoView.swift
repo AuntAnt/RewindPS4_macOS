@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct GameInfoView: View {
-    @Binding var gameInfo: GameInfo?
     
-    private let placeholder = "Waiting..."
+    @Binding var gameInfo: GameInfo?
     
     var body: some View {
         HStack {
@@ -25,31 +24,31 @@ struct GameInfoView: View {
             
             VStack(alignment: .leading, spacing: 0) {
                 InfoLabelView(
-                    title: "Game Name:",
+                    title: LocalizationKeys.gameName.rawValue,
                     value: Binding(
-                        get: { gameInfo?.title ?? placeholder },
+                        get: { gameInfo?.title },
                         set: { _ in }
                     )
                 )
                 InfoLabelView(
-                    title: "Game ID & Region:",
+                    title: LocalizationKeys.gameIDRegion.rawValue,
                     value: Binding(
-                        get: { gameInfo?.cusa ?? placeholder },
+                        get: { gameInfo?.cusa },
                         set: { _ in }
                     )
                 )
                 InfoLabelView(
-                    title: "Last Version:",
+                    title: LocalizationKeys.lastVersion.rawValue,
                     value: Binding(
-                        get: { gameInfo?.lastVersion ?? placeholder },
-                        set: {_ in}
+                        get: { gameInfo?.lastVersion },
+                        set: { _ in }
                     )
                 )
                 InfoLabelView(
-                    title: "Downgrade Version:",
+                    title: LocalizationKeys.downgradeVersion.rawValue,
                     value: Binding(
-                        get: { gameInfo?.downgradeVersion ?? placeholder },
-                        set: {_ in}
+                        get: { gameInfo?.downgradeVersion },
+                        set: { _ in }
                     )
                 )
             }

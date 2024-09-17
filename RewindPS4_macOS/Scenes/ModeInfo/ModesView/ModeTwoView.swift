@@ -14,7 +14,7 @@ struct ModeTwoView: View {
     var body: some View {
         VStack {
             HStack {
-                Text("INRODUCE")
+                Text(LocalizationKeys.introduce.rawValue)
                     .font(.seiha1)
                     .foregroundStyle(.title)
                 
@@ -22,8 +22,8 @@ struct ModeTwoView: View {
             }
             
             VStack(alignment: .leading) {
-                Text("1.Block the update server to bypass patch detection and download only the version 1.0 of the game")
-                Text("2.Due to certain reasons, this is only applicable for PS4. Using it on PS5 may result in downloading the latest version of an error code NW-102650-4")
+                Text(LocalizationKeys.m2desc1.rawValue)
+                Text(LocalizationKeys.m2desc2.rawValue)
             }
             .foregroundStyle(.descriptionText)
             

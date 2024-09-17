@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ServerInfoView: View {
     
-    let title: String
+    let title: LocalizedStringKey
     @Binding var isEditable: Bool
     var isStepperNeeded = false
     @Binding var value: String

@@ -10,7 +10,7 @@ import SwiftUI
 struct NoModeView: View {
     var body: some View {
         VStack {
-            Text("Please select any mode")
+            Text(LocalizationKeys.pleaseSelectAnyMode.rawValue)
                 .font(.title2)
                 .foregroundStyle(.infoText)
             
