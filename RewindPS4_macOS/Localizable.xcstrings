@@ -113,6 +113,22 @@
         }
       }
     },
+    "Auto Scroll" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自動スクロール"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自动滚动"
+          }
+        }
+      }
+    },
     "Block the update server to prevent game updates, download version 1.0 of the PS4 game (only applicable to PS4 consoles)" : {
       "localizations" : {
         "ja" : {

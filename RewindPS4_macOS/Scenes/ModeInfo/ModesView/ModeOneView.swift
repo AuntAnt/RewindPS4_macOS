@@ -25,6 +25,7 @@ struct ModeOneView: View {
             TextField("", text: $viewModel.jsonLink, axis: .vertical)
                 .foregroundStyle(.infoText)
                 .frame(height: 55)
+                .frame(idealWidth: 55, maxHeight: 65)
                 .textFieldStyle(PlainTextFieldStyle())
                 .padding(.horizontal, 4)
                 .multilineTextAlignment(.leading)
@@ -40,7 +41,7 @@ struct ModeOneView: View {
                         .foregroundStyle(Color.gray)
                         .shadow(color: .white, radius: isEditing ? 5 : 0)
                 }
-                .onReceive(viewModel.$jsonLink.debounce(for: .seconds(1), scheduler: DispatchQueue.main)) { _ in
+                .onReceive(viewModel.$jsonLink.debounce(for: .seconds(1), scheduler: RunLoop.main)) { _ in
                     Task {
                         await viewModel.validateInput()
                     }
@@ -58,5 +59,6 @@ struct ModeOneView: View {
 
 #Preview {
     ModeOneView()
+        .environmentObject(DowngradingViewModel())
         .preferredColorScheme(.dark)
 }

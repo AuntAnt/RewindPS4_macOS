@@ -11,12 +11,17 @@ import RewindPS4Proxy
 @MainActor
 final class DowngradingViewModel: ObservableObject {
     
-    // MARK: - Connected client and logs
+    // MARK: - Connected client
     
     @Published var latestIp = "Waiting"
     @Published var device = "Waiting"
+    private var clientTimer: Timer?
     
-    private var timer: Timer?
+    // MARK: - Logs
+    
+    @Published var logs: [String] = []
+    @Published var autoscroll = true
+    private var logsTimer: Timer?
     
     // MARK: - Mode selection
     
@@ -58,6 +63,10 @@ final class DowngradingViewModel: ObservableObject {
         
         Task {
             await setLocalIp()
+        }
+        
+        Task {
+            await fetchLogs()
         }
     }
     
@@ -141,12 +150,33 @@ final class DowngradingViewModel: ObservableObject {
         }
     }
     
-    private func fetchConnectedClient() async {
-        guard timer == nil else {
+    // MARK: - Fetching logs every 2 seconds
+    
+    private func fetchLogs() async {
+        guard logsTimer == nil else {
             return
         }
         
-        timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { _ in
+        logsTimer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { _ in
+            Task { @MainActor in
+                do {
+                    let log = try await self.logging.fetchLogs()
+                    self.logs = log.logs
+                } catch {
+                    self.logs = [error.localizedDescription]
+                }
+            }
+        }
+    }
+    
+    // MARK: - Fetching connected client info every 2 seconds when server is running
+    
+    private func fetchConnectedClient() async {
+        guard clientTimer == nil else {
+            return
+        }
+        
+        clientTimer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { _ in
             Task { @MainActor in
                 let result = try? await self.logging.fetchClientStatus()
                 
@@ -161,8 +191,8 @@ final class DowngradingViewModel: ObservableObject {
     }
     
     private func stopFetchingLogs() {
-        timer?.invalidate()
-        timer = nil
+        clientTimer?.invalidate()
+        clientTimer = nil
         latestIp = "Waiting"
         device = "Waiting"
     }

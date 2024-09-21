@@ -45,6 +45,8 @@
 		18D1B3062C9880BE006B3E1E /* LocalizationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1B3052C9880BE006B3E1E /* LocalizationKeys.swift */; };
 		18D1B31F2C98BE2F006B3E1E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 18D1B31E2C98BE2F006B3E1E /* Localizable.xcstrings */; };
 		18DF17EF2C960EA600D0B31D /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF17EE2C960EA600D0B31D /* SpinnerView.swift */; };
+		18E87C3D2C9CB5A400483316 /* LogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E87C3C2C9CB5A400483316 /* LogsView.swift */; };
+		18FB6E1A2C9E0ED2003B6B0B /* LogsScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB6E192C9E0ED2003B6B0B /* LogsScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -110,6 +112,8 @@
 		18D1B31E2C98BE2F006B3E1E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		18DF17EE2C960EA600D0B31D /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		18DF17F42C96D44500D0B31D /* RewindPS4_macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RewindPS4_macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18E87C3C2C9CB5A400483316 /* LogsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsView.swift; sourceTree = "<group>"; };
+		18FB6E192C9E0ED2003B6B0B /* LogsScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +244,7 @@
 		18735AB52C80B91400486D28 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				18E87C3B2C9CB57C00483316 /* Logs */,
 				1823CE072C825DFC00C80D12 /* Header */,
 				1823CE152C844F6D00C80D12 /* ModeSelection */,
 				1823CE102C838BC500C80D12 /* ProxyServer */,
@@ -295,6 +300,15 @@
 				18D1B3002C9841A6006B3E1E /* Links.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		18E87C3B2C9CB57C00483316 /* Logs */ = {
+			isa = PBXGroup;
+			children = (
+				18E87C3C2C9CB5A400483316 /* LogsView.swift */,
+				18FB6E192C9E0ED2003B6B0B /* LogsScrollView.swift */,
+			);
+			path = Logs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,6 +399,7 @@
 				1823CDFF2C81F0A200C80D12 /* StartButton.swift in Sources */,
 				1823CE122C838BE500C80D12 /* ServerInfoView.swift in Sources */,
 				18DF17EF2C960EA600D0B31D /* SpinnerView.swift in Sources */,
+				18FB6E1A2C9E0ED2003B6B0B /* LogsScrollView.swift in Sources */,
 				18A3B0172C8B32F000870E0C /* GameInfoView.swift in Sources */,
 				18A874FA2C81D98600725456 /* BackgroundView.swift in Sources */,
 				18A874FE2C81E71B00725456 /* ImageName.swift in Sources */,
@@ -405,6 +420,7 @@
 				1823CE052C821B8E00C80D12 /* InfoLabelView.swift in Sources */,
 				18735AB72C80B92C00486D28 /* ProxyServerView.swift in Sources */,
 				189319CB2C8C7FBE0030EFE0 /* Network.swift in Sources */,
+				18E87C3D2C9CB5A400483316 /* LogsView.swift in Sources */,
 				18D1B3012C9841A6006B3E1E /* Links.swift in Sources */,
 				189319CD2C8D7ECC0030EFE0 /* Proxy.swift in Sources */,
 				18A3B0152C8B2B9200870E0C /* GameInfo.swift in Sources */,

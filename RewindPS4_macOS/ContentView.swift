@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var downgradingMode = DowngradingViewModel()
+    @StateObject private var viewModel = DowngradingViewModel()
     
     var body: some View {
         VStack {
@@ -18,12 +18,15 @@ struct ContentView: View {
                 ProxyServerView()
             }
             
-            ModeInfoView()
+            HStack {
+                ModeInfoView()
+                LogsView()
+            }
             GuideLinkLabel()
         }
         .padding()
         .preferredColorScheme(.dark)
-        .environmentObject(downgradingMode)
+        .environmentObject(viewModel)
     }
 }
 
