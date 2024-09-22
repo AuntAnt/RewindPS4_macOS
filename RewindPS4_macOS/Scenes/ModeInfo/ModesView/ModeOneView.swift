@@ -13,7 +13,7 @@ struct ModeOneView: View {
     @FocusState private var isEditing: Bool
     
     var body: some View {
-        VStack {
+        VStack(spacing: 15) {
             HStack {
                 Text(viewModel.inputMessage)
                     .foregroundStyle(.title)
@@ -24,19 +24,18 @@ struct ModeOneView: View {
             
             TextField("", text: $viewModel.jsonLink, axis: .vertical)
                 .foregroundStyle(.infoText)
-                .frame(height: 55)
-                .frame(idealWidth: 55, maxHeight: 65)
+                .frame(height: 85)
                 .textFieldStyle(PlainTextFieldStyle())
                 .padding(.horizontal, 4)
                 .multilineTextAlignment(.leading)
-                .lineLimit(4)
+                .lineLimit(5)
                 .focused($isEditing)
                 .disabled(viewModel.isServerRunning)
                 .onTapGesture {
                     isEditing = true
                 }
                 .overlay {
-                    RoundedRectangle(cornerSize: CGSize(square: 10))
+                    RoundedRectangle(cornerSize: CGSize(square: 5))
                         .stroke(lineWidth: 1)
                         .foregroundStyle(Color.gray)
                         .shadow(color: .white, radius: isEditing ? 5 : 0)

@@ -23,8 +23,6 @@ struct ModeInfoView: View {
             }
         }
         .padding()
-        .border(.gray)
-        .padding()
     }
 }
 

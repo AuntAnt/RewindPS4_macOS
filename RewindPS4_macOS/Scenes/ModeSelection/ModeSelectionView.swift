@@ -12,7 +12,7 @@ struct ModeSelectionView: View {
     @EnvironmentObject private var viewModel: DowngradingViewModel
     
     var body: some View {
-        VStack {
+        VStack(spacing: 8) {
             ModeSelectionButton(
                 title: LocalizationKeys.mode1.rawValue,
                 description: LocalizationKeys.mode1Desc.rawValue,

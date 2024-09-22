@@ -244,11 +244,11 @@
 		18735AB52C80B91400486D28 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				18E87C3B2C9CB57C00483316 /* Logs */,
 				1823CE072C825DFC00C80D12 /* Header */,
 				1823CE152C844F6D00C80D12 /* ModeSelection */,
 				1823CE102C838BC500C80D12 /* ProxyServer */,
 				1823CE062C825B6E00C80D12 /* ModeInfo */,
+				18E87C3B2C9CB57C00483316 /* Logs */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";

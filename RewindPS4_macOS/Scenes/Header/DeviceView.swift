@@ -16,7 +16,7 @@ struct DeviceView: View {
             Image(ImageName.deviceBackground)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(minWidth: 400, idealWidth: 400, maxWidth: 400, minHeight: 100, idealHeight: 100, maxHeight: 100)
+                .frame(width: 400, height: 100)
             
             VStack(alignment: .leading, spacing: 10) {
                 Text(LocalizationKeys.connected.rawValue)
@@ -37,6 +37,7 @@ struct DeviceView: View {
                 .foregroundStyle(.accent)
             }
         }
+        .frame(width: 400, height: 100)
     }
 }
 

@@ -11,18 +11,25 @@ struct ContentView: View {
     @StateObject private var viewModel = DowngradingViewModel()
     
     var body: some View {
-        VStack {
+        VStack(spacing: 10) {
             HeaderView()
-            HStack {
+            
+            HStack(spacing: 10) {
                 ModeSelectionView()
                 ProxyServerView()
             }
+            .frame(width: 970, height: 240)
             
-            HStack {
+            HStack(spacing: 10) {
                 ModeInfoView()
+                    .frame(height: 382)
+                    .border(Color.gray)
                 LogsView()
             }
+            .frame(width: 970, height: 390)
+            
             GuideLinkLabel()
+                .frame(height: 20)
         }
         .padding()
         .preferredColorScheme(.dark)

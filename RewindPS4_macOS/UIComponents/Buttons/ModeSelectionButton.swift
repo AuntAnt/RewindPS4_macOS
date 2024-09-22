@@ -33,9 +33,8 @@ struct ModeSelectionButton: View {
                 .padding(.horizontal, 8)
             }
             .foregroundStyle(.black.opacity(0.4))
-            .frame(minWidth: 400, idealWidth: 400, minHeight: 117, maxHeight: 117)
             .border(.gray, width: isSelected ? 2 : 0.5)
-            .scaleEffect(isSelected ? CGSize(square: 1.02) : CGSize(square: 1))
+            .scaleEffect(isSelected ? CGSize(square: 1.01) : CGSize(square: 1))
             .onTapGesture {
                 if isEnable {                
                     action()

@@ -9,16 +9,16 @@ import SwiftUI
 
 struct HeaderView: View {
     var body: some View {
-        HStack {
+        HStack(spacing: 10) {
             Image(ImageName.header)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(minWidth: 600, idealWidth: 600, minHeight: 80, idealHeight: 80, maxHeight: 80)
             
             Spacer()
             
             DeviceView()
         }
+        .frame(width: 970, height: 100)
     }
 }
 

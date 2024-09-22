@@ -20,10 +20,11 @@ struct LogsScrollView: View {
                         Text(attributeText(logs[index]))
                             .padding(.vertical, 1)
                             .id(index)
+                            .padding(.horizontal, 4)
                     }
                 }
             }
-            .frame(maxWidth: .infinity, maxHeight: 300, alignment: .leading)
+            .frame(maxWidth: .infinity, maxHeight: 315, alignment: .leading)
             .background {
                 Color.gray.opacity(0.1)
             }
