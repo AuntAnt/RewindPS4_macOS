@@ -47,6 +47,11 @@
 		18DF17EF2C960EA600D0B31D /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF17EE2C960EA600D0B31D /* SpinnerView.swift */; };
 		18E87C3D2C9CB5A400483316 /* LogsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E87C3C2C9CB5A400483316 /* LogsView.swift */; };
 		18FB6E1A2C9E0ED2003B6B0B /* LogsScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB6E192C9E0ED2003B6B0B /* LogsScrollView.swift */; };
+		18FB6E1E2CA093A3003B6B0B /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB6E1D2CA093A3003B6B0B /* FAQView.swift */; };
+		18FB6E202CA095C9003B6B0B /* FAQViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB6E1F2CA095C9003B6B0B /* FAQViewCell.swift */; };
+		18FB6E222CA0982A003B6B0B /* ErrorCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB6E212CA0982A003B6B0B /* ErrorCodes.swift */; };
+		18FB6E272CA09F8F003B6B0B /* DismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB6E262CA09F8F003B6B0B /* DismissButton.swift */; };
+		18FB6E292CA0A9A0003B6B0B /* FAQViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FB6E282CA0A9A0003B6B0B /* FAQViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -114,6 +119,11 @@
 		18DF17F42C96D44500D0B31D /* RewindPS4_macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RewindPS4_macOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E87C3C2C9CB5A400483316 /* LogsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsView.swift; sourceTree = "<group>"; };
 		18FB6E192C9E0ED2003B6B0B /* LogsScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsScrollView.swift; sourceTree = "<group>"; };
+		18FB6E1D2CA093A3003B6B0B /* FAQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
+		18FB6E1F2CA095C9003B6B0B /* FAQViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewCell.swift; sourceTree = "<group>"; };
+		18FB6E212CA0982A003B6B0B /* ErrorCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCodes.swift; sourceTree = "<group>"; };
+		18FB6E262CA09F8F003B6B0B /* DismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissButton.swift; sourceTree = "<group>"; };
+		18FB6E282CA0A9A0003B6B0B /* FAQViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +154,7 @@
 			children = (
 				1823CDFE2C81F0A200C80D12 /* StartButton.swift */,
 				1823CE002C81F34B00C80D12 /* ModeSelectionButton.swift */,
+				18FB6E262CA09F8F003B6B0B /* DismissButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -249,6 +260,7 @@
 				1823CE102C838BC500C80D12 /* ProxyServer */,
 				1823CE062C825B6E00C80D12 /* ModeInfo */,
 				18E87C3B2C9CB57C00483316 /* Logs */,
+				18FB6E1C2CA09382003B6B0B /* FAQ */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -298,6 +310,7 @@
 				18D1B3052C9880BE006B3E1E /* LocalizationKeys.swift */,
 				18A874FD2C81E71B00725456 /* ImageName.swift */,
 				18D1B3002C9841A6006B3E1E /* Links.swift */,
+				18FB6E212CA0982A003B6B0B /* ErrorCodes.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -309,6 +322,16 @@
 				18FB6E192C9E0ED2003B6B0B /* LogsScrollView.swift */,
 			);
 			path = Logs;
+			sourceTree = "<group>";
+		};
+		18FB6E1C2CA09382003B6B0B /* FAQ */ = {
+			isa = PBXGroup;
+			children = (
+				18FB6E1D2CA093A3003B6B0B /* FAQView.swift */,
+				18FB6E1F2CA095C9003B6B0B /* FAQViewCell.swift */,
+				18FB6E282CA0A9A0003B6B0B /* FAQViewModel.swift */,
+			);
+			path = FAQ;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,8 +424,10 @@
 				18DF17EF2C960EA600D0B31D /* SpinnerView.swift in Sources */,
 				18FB6E1A2C9E0ED2003B6B0B /* LogsScrollView.swift in Sources */,
 				18A3B0172C8B32F000870E0C /* GameInfoView.swift in Sources */,
+				18FB6E292CA0A9A0003B6B0B /* FAQViewModel.swift in Sources */,
 				18A874FA2C81D98600725456 /* BackgroundView.swift in Sources */,
 				18A874FE2C81E71B00725456 /* ImageName.swift in Sources */,
+				18FB6E202CA095C9003B6B0B /* FAQViewCell.swift in Sources */,
 				1823CE142C844F2400C80D12 /* CGSize+.swift in Sources */,
 				18D1B2FF2C98416A006B3E1E /* GuideLinkLabel.swift in Sources */,
 				189319CF2C8D925E0030EFE0 /* Mapper.swift in Sources */,
@@ -423,9 +448,12 @@
 				18E87C3D2C9CB5A400483316 /* LogsView.swift in Sources */,
 				18D1B3012C9841A6006B3E1E /* Links.swift in Sources */,
 				189319CD2C8D7ECC0030EFE0 /* Proxy.swift in Sources */,
+				18FB6E1E2CA093A3003B6B0B /* FAQView.swift in Sources */,
+				18FB6E222CA0982A003B6B0B /* ErrorCodes.swift in Sources */,
 				18A3B0152C8B2B9200870E0C /* GameInfo.swift in Sources */,
 				18735AA82C80B86D00486D28 /* RewindPS4_macOSApp.swift in Sources */,
 				18D1B3062C9880BE006B3E1E /* LocalizationKeys.swift in Sources */,
+				18FB6E272CA09F8F003B6B0B /* DismissButton.swift in Sources */,
 				1823CE1B2C8495DA00C80D12 /* NoModeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

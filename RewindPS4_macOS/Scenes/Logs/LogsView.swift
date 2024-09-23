@@ -23,6 +23,7 @@ struct LogsView: View {
                     
                     Toggle(isOn: $viewModel.autoscroll, label: {
                         Text(LocalizationKeys.autoScroll.rawValue)
+                            .foregroundStyle(.white)
                     })
                 }
                 

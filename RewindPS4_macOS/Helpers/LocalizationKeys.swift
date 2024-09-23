@@ -50,13 +50,13 @@ enum LocalizationKeys: LocalizedStringKey {
     
     case serverStartFailed = "Start failed, close other programs to avoid network conflicts, or change port"
     case errorCode = "SEE FAQ"
-    case other_error = "Other problems"
+    case otherError = "Other problems"
     case blocked = "Unable to connect to the PS4 game update server (this error prevents PS5 from downloading version 1.0)"
     case blocked2 = "PS4 update server address is blocked by DNS error."
     case netError = "Blocked by update, please try again"
-    case other_error1 = "1.Log error'Failed to start proxy server, please try another PORT. Try a few ports or restart the computer."
-    case other_error2 = "2.The local IP is not the correct segment, check if the computer has a virtual NIC, if it does, temporarily disable it."
-    case Blocked_PS4 = "Unable to connect to the PS4 game update server, check update failed"
+    case otherError1 = "1.Log error'Failed to start proxy server, please try another PORT. Try a few ports or restart the computer."
+    case otherError2 = "2.The local IP is not the correct segment, check if the computer has a virtual NIC, if it does, temporarily disable it."
+    case blockedPS4 = "Unable to connect to the PS4 game update server, check update failed"
     case CUSAMismatch = "The game's CUSA ID does not match(different version). For example, trying to download the EU version but entering the US version JSON."
     case SpecialIssue = "Encountered a special game that cannot be downgraded. Such games have a smaller size after a certain update, so they cannot be downgraded on PS5, only on PS4, like SKUL HERO SLAYER,SYPHON FILTER 3. Refer to the user guide for details."
 }

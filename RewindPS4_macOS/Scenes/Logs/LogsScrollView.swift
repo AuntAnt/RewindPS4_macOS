@@ -15,7 +15,7 @@ struct LogsScrollView: View {
     var body: some View {
         ScrollViewReader { proxy in
             ScrollView {
-                VStack(alignment: .leading, spacing: 8) {
+                LazyVStack(alignment: .leading, spacing: 8) {
                     ForEach(logs.indices, id: \.self) { index in
                         Text(attributeText(logs[index]))
                             .padding(.vertical, 1)

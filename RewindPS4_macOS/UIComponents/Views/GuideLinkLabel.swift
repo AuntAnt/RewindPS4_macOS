@@ -18,12 +18,9 @@ struct GuideLinkLabel: View {
     }
     
     var body: some View {
-        HStack {
-            Spacer()
-            Link(LocalizationKeys.guide.rawValue, destination: guideUrl)
-                .foregroundStyle(.accent)
-                .underline(color: .accent)
-        }
+        Link(LocalizationKeys.guide.rawValue, destination: guideUrl)
+            .foregroundStyle(.accent)
+            .underline(color: .accent)
     }
 }
 

@@ -545,6 +545,38 @@
         }
       }
     },
+    "PS4:" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PS4:"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PS4:"
+          }
+        }
+      }
+    },
+    "PS5:" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PS5:"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PS5:"
+          }
+        }
+      }
+    },
     "SEE FAQ" : {
       "localizations" : {
         "ja" : {
