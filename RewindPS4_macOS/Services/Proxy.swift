@@ -30,12 +30,16 @@ final class Proxy {
         return mapper.createGameInfo(from: response, downgradeVersion, cover)
     }
     
-    func startProxy(on port: String) {
-        service.startProxy(port)
+    func startProxy(on port: String) async throws {
+        try await service.startProxy(port)
     }
     
     func stopProxy() {
         service.stopProxy()
+    }
+    
+    func pushSelectedModeLog(_ mode: Mode) {
+        service.pushModeSelectionLog(mode.rawValue)
     }
     
     func detectConnectedDevice(_ userAgent: String) -> String {

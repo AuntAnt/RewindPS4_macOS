@@ -46,6 +46,11 @@ struct ProxyServerView: View {
             StartButton(title: $viewModel.buttonLabel) {
                 viewModel.toggleServer()
             }
+            .overlay(alignment: .center) {
+                if viewModel.attemptToStart {
+                    SpinnerView()
+                }
+            }
         }
         .alert(LocalizationKeys.error.rawValue, isPresented: $viewModel.isError, actions: {}) {
             Text(viewModel.alertMessage ?? "")

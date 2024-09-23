@@ -30,6 +30,10 @@ final class DowngradingViewModel: ObservableObject {
             if currentMode != .mode1 {
                 jsonLink = ""
             }
+            
+            if !isServerRunning {            
+                proxy.pushSelectedModeLog(currentMode)
+            }
         }
     }
     
@@ -49,6 +53,7 @@ final class DowngradingViewModel: ObservableObject {
     @Published var serverStateLabel = LocalizationKeys.notRunning.rawValue
     @Published var alertMessage: LocalizedStringKey?
     @Published var isServerRunning = false
+    @Published var attemptToStart = false
     
     // MARK: - Dependency
     
@@ -112,10 +117,24 @@ final class DowngradingViewModel: ObservableObject {
             serverStateLabel = LocalizationKeys.notRunning.rawValue
             alertMessage = LocalizationKeys.portUsed.rawValue
         } else {
-            proxy.startProxy(on: port)
-            isServerRunning = true
-            buttonLabel = LocalizationKeys.stopProxy.rawValue
-            serverStateLabel = LocalizationKeys.running.rawValue
+            attemptToStart = true
+            Task {
+                do {
+                    try await proxy.startProxy(on: port)
+                    isServerRunning = true
+                    buttonLabel = LocalizationKeys.stopProxy.rawValue
+                    serverStateLabel = LocalizationKeys.running.rawValue
+                } catch {
+                    isError = true
+                    alertMessage = LocalizedStringKey(error.localizedDescription)
+                    
+                    isServerRunning = false
+                    buttonLabel = LocalizationKeys.startProxy.rawValue
+                    serverStateLabel = LocalizationKeys.notRunning.rawValue
+                }
+                
+                attemptToStart = false
+            }
             Task {
                 await fetchConnectedClient()
             }
