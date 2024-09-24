@@ -26,7 +26,7 @@ enum LocalizationKeys: LocalizedStringKey {
     case mode2Desc = "Block the update server to prevent game updates, download version 1.0 of the PS4 game (only applicable to PS4 consoles)"
     case log = "LOG"
     case autoScroll = "Auto Scroll"
-//    case logFiltering = "Log Filtering"
+    case logFiltering = "Log Filtering"
     case noLogsAvailable = "No logs available"
 //    case serverRunningCannotSelectMode = "Server is running, cannot select mode"
 //    case noModeSelectedWarning = "No mode selected, the server will start as a regular proxy server."

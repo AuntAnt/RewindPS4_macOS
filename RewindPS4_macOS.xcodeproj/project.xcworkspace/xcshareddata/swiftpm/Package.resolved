@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/AuntAnt/RewindPS4Proxy.git",
       "state" : {
-        "revision" : "e6f9f71e04955d125945d9b3401924ccece04d64",
-        "version" : "1.0.1"
+        "revision" : "2ca8246cf694d465488d60447a06220b83ceef88",
+        "version" : "1.0.2"
       }
     }
   ],

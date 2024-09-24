@@ -20,6 +20,11 @@ final class Proxy {
     }
     
     func setMode(_ mode: Mode, _ url: String) async throws -> GameInfo? {
+        guard mode == .mode1 else {
+            let _ = try await service.setMode(mode.rawValue, url)
+            return nil
+        }
+        
         async let setMode = service.setMode(mode.rawValue, url)
         async let imageCover = getGameCoverImage(from: url)
         

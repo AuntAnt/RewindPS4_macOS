@@ -25,6 +25,11 @@ struct LogsView: View {
                         Text(LocalizationKeys.autoScroll.rawValue)
                             .foregroundStyle(.white)
                     })
+                    
+                    Toggle(isOn: $viewModel.logFiltering, label: {
+                        Text(LocalizationKeys.logFiltering.rawValue)
+                            .foregroundStyle(.white)
+                    })
                 }
                 
                 Color.gray.frame(height: 1)

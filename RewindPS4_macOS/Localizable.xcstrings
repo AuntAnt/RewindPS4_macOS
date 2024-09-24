@@ -353,6 +353,22 @@
         }
       }
     },
+    "Log Filtering" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "フィルタ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日志过滤"
+          }
+        }
+      }
+    },
     "MODE-1" : {
       "localizations" : {
         "ja" : {

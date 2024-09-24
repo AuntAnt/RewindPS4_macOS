@@ -26,7 +26,12 @@ struct ModeSelectionView: View {
                 description: LocalizationKeys.mode2Desc.rawValue,
                 isSelected: viewModel.currentMode == .mode2,
                 isEnable: !viewModel.isServerRunning || viewModel.isServerRunning && viewModel.currentMode == .mode2,
-                action: { viewModel.currentMode = .mode2 }
+                action: { 
+                    viewModel.currentMode = .mode2
+                    Task {
+                        await viewModel.changeMode()
+                    }
+                }
             )
         }
     }

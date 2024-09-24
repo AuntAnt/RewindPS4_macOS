@@ -21,6 +21,7 @@ final class DowngradingViewModel: ObservableObject {
     
     @Published var logs: [String] = []
     @Published var autoscroll = true
+    @Published var logFiltering = false
     private var logsTimer: Timer?
     
     // MARK: - Mode selection
@@ -72,6 +73,17 @@ final class DowngradingViewModel: ObservableObject {
         
         Task {
             await fetchLogs()
+        }
+    }
+    
+    func changeMode() async {
+        if currentMode == .mode2 {
+            do {
+                let _ = try await proxy.setMode(currentMode, "")
+            } catch {
+                isError = true
+                alertMessage = LocalizedStringKey(error.localizedDescription)
+            }
         }
     }
     
@@ -176,11 +188,27 @@ final class DowngradingViewModel: ObservableObject {
             return
         }
         
-        logsTimer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { _ in
+        logsTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             Task { @MainActor in
                 do {
-                    let log = try await self.logging.fetchLogs()
-                    self.logs = log.logs
+                    let data = try await self.logging.fetchLogs()
+                    
+                    var result: [String] = []
+                    
+                    data.logs.forEach { log in
+                        if !log.contains("***") {
+                            if !self.logFiltering
+                                || (log.contains("INFO")
+                                    || log.contains(".json")
+                                    || log.contains(".pkj")
+                                    || log.contains(".png")
+                                ) {
+                                result.append(log)
+                            }
+                        }
+                    }
+                    
+                    self.logs = result
                 } catch {
                     self.logs = [error.localizedDescription]
                 }

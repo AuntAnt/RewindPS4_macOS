@@ -52,7 +52,12 @@ struct LogsScrollView: View {
         first.foregroundColor = .descriptionText
         
         var second = AttributedString(parts[1])
-        second.foregroundColor = .accent
+        
+        second.foregroundColor = if second == "INFO" {
+            .accent
+        } else {
+            .white
+        }
         
         var third = AttributedString(parts[2])
         third.foregroundColor = .infoText

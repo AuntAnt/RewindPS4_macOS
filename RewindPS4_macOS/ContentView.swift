@@ -47,6 +47,7 @@ struct ContentView: View {
                 .frame(height: 20)
             }
             .padding()
+            .preferredColorScheme(.dark)
             .background(content: {
                 Color.background
             })
