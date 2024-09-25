@@ -53,10 +53,7 @@ struct FAQView: View {
             }
         }
         .padding()
-        .background(content: {
-            Color.background
-        })
-        .border(Color.black)
+        .background(content: { Color.background })
         .overlay(alignment: .topTrailing) {
             DismissButton(action: { viewModel.isShowingFAQ = false })
         }

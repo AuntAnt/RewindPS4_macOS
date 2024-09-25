@@ -12,7 +12,9 @@ struct StartButton: View {
     @Binding var title: LocalizedStringKey
     var action: () -> Void
     
-    var body: some View {        
+    @State private var isHover = false
+    
+    var body: some View {
         Rectangle()
             .frame(minWidth: 200, idealWidth: 400, maxWidth: 400, minHeight: 50, idealHeight: 50, maxHeight: 50)
             .overlay {
@@ -26,6 +28,11 @@ struct StartButton: View {
                 action()
             }
             .shadow(color: .accent, radius: 3)
+            .animation(.bouncy, value: isHover)
+            .scaleEffect(isHover ? 1.05 : 1)
+            .onHover(perform: { hovering in
+                isHover = hovering
+            })
     }
 }
 
