@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180710802CA862DD00F088E7 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807107F2CA862DD00F088E7 /* View+.swift */; };
+		180710832CA8637F00F088E7 /* LoadingFillModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180710822CA8637F00F088E7 /* LoadingFillModifier.swift */; };
 		181403322C8F7F3C00E369D7 /* Logs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181403312C8F7F3C00E369D7 /* Logs.swift */; };
 		181403342C8F7F6E00E369D7 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181403332C8F7F6E00E369D7 /* Logging.swift */; };
+		18187F4C2CA530EF0011055D /* Collection+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18187F4B2CA530EF0011055D /* Collection+.swift */; };
 		1823CDFF2C81F0A200C80D12 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CDFE2C81F0A200C80D12 /* StartButton.swift */; };
 		1823CE012C81F34B00C80D12 /* ModeSelectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE002C81F34B00C80D12 /* ModeSelectionButton.swift */; };
 		1823CE052C821B8E00C80D12 /* InfoLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE042C821B8E00C80D12 /* InfoLabelView.swift */; };
@@ -78,8 +81,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1807107F2CA862DD00F088E7 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		180710822CA8637F00F088E7 /* LoadingFillModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFillModifier.swift; sourceTree = "<group>"; };
 		181403312C8F7F3C00E369D7 /* Logs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logs.swift; sourceTree = "<group>"; };
 		181403332C8F7F6E00E369D7 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		18187F4B2CA530EF0011055D /* Collection+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+.swift"; sourceTree = "<group>"; };
 		1823CDFE2C81F0A200C80D12 /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
 		1823CE002C81F34B00C80D12 /* ModeSelectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSelectionButton.swift; sourceTree = "<group>"; };
 		1823CE042C821B8E00C80D12 /* InfoLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLabelView.swift; sourceTree = "<group>"; };
@@ -138,6 +144,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180710812CA8633600F088E7 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				180710822CA8637F00F088E7 /* LoadingFillModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		1823CE022C81F35C00C80D12 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +305,8 @@
 				1823CE132C844F2400C80D12 /* CGSize+.swift */,
 				1823CE182C84809700C80D12 /* Binding+.swift */,
 				18A3B0182C8B349A00870E0C /* Image+.swift */,
+				18187F4B2CA530EF0011055D /* Collection+.swift */,
+				1807107F2CA862DD00F088E7 /* View+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -298,6 +314,7 @@
 		18A874FB2C81DA3600725456 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				180710812CA8633600F088E7 /* Modifiers */,
 				1823CE022C81F35C00C80D12 /* Views */,
 				1823CE032C81F36700C80D12 /* Buttons */,
 			);
@@ -415,9 +432,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18187F4C2CA530EF0011055D /* Collection+.swift in Sources */,
 				1823CE092C825E1900C80D12 /* DeviceView.swift in Sources */,
 				1823CE202C84A5E200C80D12 /* ModeTwoView.swift in Sources */,
 				18735AB92C80BFF600486D28 /* ModeSelectionView.swift in Sources */,
+				180710802CA862DD00F088E7 /* View+.swift in Sources */,
 				18A874F82C81D55900725456 /* Font+.swift in Sources */,
 				1823CDFF2C81F0A200C80D12 /* StartButton.swift in Sources */,
 				1823CE122C838BE500C80D12 /* ServerInfoView.swift in Sources */,
@@ -435,6 +454,7 @@
 				18735ABD2C819F9300486D28 /* HeaderView.swift in Sources */,
 				1823CE232C84B80E00C80D12 /* DowngradingViewModel.swift in Sources */,
 				1823CE1E2C84A5D100C80D12 /* ModeOneView.swift in Sources */,
+				180710832CA8637F00F088E7 /* LoadingFillModifier.swift in Sources */,
 				181403322C8F7F3C00E369D7 /* Logs.swift in Sources */,
 				1823CE012C81F34B00C80D12 /* ModeSelectionButton.swift in Sources */,
 				18735AAA2C80B86D00486D28 /* ContentView.swift in Sources */,

@@ -10,13 +10,14 @@ import SwiftUI
 struct StartButton: View {
     
     @Binding var title: LocalizedStringKey
+    @Binding var attemptToStart: Bool
     var action: () -> Void
     
     @State private var isHover = false
     
     var body: some View {
         Rectangle()
-            .frame(minWidth: 200, idealWidth: 400, maxWidth: 400, minHeight: 50, idealHeight: 50, maxHeight: 50)
+            .frame(width: 400, height: 50)
             .overlay {
                 Text(title)
                     .foregroundStyle(.white)
@@ -24,20 +25,20 @@ struct StartButton: View {
             }
             .foregroundStyle(.black)
             .border(.accent, width: 1)
-            .onTapGesture {
-                action()
-            }
             .shadow(color: .accent, radius: 3)
-            .animation(.bouncy, value: isHover)
-            .scaleEffect(isHover ? 1.05 : 1)
+            .scaleEffect(isHover && !attemptToStart ? 1.05 : 1)
             .onHover(perform: { hovering in
                 isHover = hovering
             })
+            .loadingView(isLoading: $attemptToStart)
+            .onTapGesture {
+                action()
+            }
     }
 }
 
 #Preview {
-    StartButton(title: .constant(LocalizationKeys.startProxy.rawValue)) {}
+    StartButton(title: .constant(LocalizationKeys.startProxy.rawValue), attemptToStart: .constant(false)) {}
         .preferredColorScheme(.dark)
         .padding()
 }

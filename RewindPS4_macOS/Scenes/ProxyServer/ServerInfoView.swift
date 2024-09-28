@@ -13,6 +13,7 @@ struct ServerInfoView: View {
     @Binding var isEditable: Bool
     var isStepperNeeded = false
     @Binding var value: String
+    let color: Color
     
     var body: some View {
         HStack {
@@ -25,7 +26,7 @@ struct ServerInfoView: View {
                 .textFieldStyle(PlainTextFieldStyle())
                 .padding(.horizontal, 4)
                 .disabled(!isEditable)
-                .foregroundStyle(.infoText)
+                .foregroundStyle(color)
                 .background { Color.black.opacity(0.6) }
                 .overlay(alignment: .trailing) {
                     if isEditable, isStepperNeeded {
@@ -38,7 +39,13 @@ struct ServerInfoView: View {
 }
 
 #Preview {
-    ServerInfoView(title: "Label:", isEditable: .constant(true), isStepperNeeded: true, value: .constant("8080"))
+    ServerInfoView(
+        title: "Label:",
+        isEditable: .constant(true),
+        isStepperNeeded: true,
+        value: .constant("8080"),
+        color: .infoText
+    )
         .preferredColorScheme(.dark)
         .padding()
 }

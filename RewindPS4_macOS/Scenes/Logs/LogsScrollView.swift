@@ -48,18 +48,17 @@ struct LogsScrollView: View {
         var result = AttributedString()
         let space = AttributedString(" ")
         
-        var first = AttributedString(parts[0])
+        var first = AttributedString(parts[safe: 0] ?? "")
         first.foregroundColor = .descriptionText
         
-        var second = AttributedString(parts[1])
-        
+        var second = AttributedString(parts[safe: 1] ?? "")
         second.foregroundColor = if second == "INFO" {
             .accent
         } else {
             .white
         }
         
-        var third = AttributedString(parts[2])
+        var third = AttributedString(parts[safe: 2] ?? "")
         third.foregroundColor = .infoText
         
         result.append(first)

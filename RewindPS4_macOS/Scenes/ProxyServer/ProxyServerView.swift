@@ -26,7 +26,8 @@ struct ProxyServerView: View {
                 ServerInfoView(
                     title: LocalizationKeys.localIP.rawValue,
                     isEditable: .constant(false),
-                    value: $viewModel.localIp
+                    value: $viewModel.localIp, 
+                    color: viewModel.isServerRunning ? .accent : .infoText
                 )
                 
                 // Port view
@@ -34,7 +35,8 @@ struct ProxyServerView: View {
                     title: LocalizationKeys.port.rawValue,
                     isEditable: $viewModel.isServerRunning.not,
                     isStepperNeeded: true,
-                    value: $viewModel.port
+                    value: $viewModel.port,
+                    color: viewModel.isServerRunning ? .accent : .infoText
                 )
             }
             
@@ -43,13 +45,8 @@ struct ProxyServerView: View {
                 .foregroundStyle(viewModel.isServerRunning ? .accent : .white)
                 .padding()
             
-            StartButton(title: $viewModel.buttonLabel) {
+            StartButton(title: $viewModel.buttonLabel, attemptToStart: $viewModel.attemptToStart) {
                 viewModel.toggleServer()
-            }
-            .overlay(alignment: .center) {
-                if viewModel.attemptToStart {
-                    SpinnerView()
-                }
             }
         }
         .alert(LocalizationKeys.error.rawValue, isPresented: $viewModel.isError, actions: {}) {
