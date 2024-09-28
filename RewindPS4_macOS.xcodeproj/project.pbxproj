@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		180710802CA862DD00F088E7 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807107F2CA862DD00F088E7 /* View+.swift */; };
 		180710832CA8637F00F088E7 /* LoadingFillModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180710822CA8637F00F088E7 /* LoadingFillModifier.swift */; };
+		180710852CA8717100F088E7 /* AnimatedStripedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180710842CA8717100F088E7 /* AnimatedStripedView.swift */; };
 		181403322C8F7F3C00E369D7 /* Logs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181403312C8F7F3C00E369D7 /* Logs.swift */; };
 		181403342C8F7F6E00E369D7 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181403332C8F7F6E00E369D7 /* Logging.swift */; };
 		18187F4C2CA530EF0011055D /* Collection+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18187F4B2CA530EF0011055D /* Collection+.swift */; };
@@ -83,6 +84,7 @@
 /* Begin PBXFileReference section */
 		1807107F2CA862DD00F088E7 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		180710822CA8637F00F088E7 /* LoadingFillModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFillModifier.swift; sourceTree = "<group>"; };
+		180710842CA8717100F088E7 /* AnimatedStripedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedStripedView.swift; sourceTree = "<group>"; };
 		181403312C8F7F3C00E369D7 /* Logs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logs.swift; sourceTree = "<group>"; };
 		181403332C8F7F6E00E369D7 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		18187F4B2CA530EF0011055D /* Collection+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+.swift"; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				18A874F92C81D98600725456 /* BackgroundView.swift */,
 				18DF17EE2C960EA600D0B31D /* SpinnerView.swift */,
 				18D1B2FE2C98416A006B3E1E /* GuideLinkLabel.swift */,
+				180710842CA8717100F088E7 /* AnimatedStripedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				18D1B3012C9841A6006B3E1E /* Links.swift in Sources */,
 				189319CD2C8D7ECC0030EFE0 /* Proxy.swift in Sources */,
 				18FB6E1E2CA093A3003B6B0B /* FAQView.swift in Sources */,
+				180710852CA8717100F088E7 /* AnimatedStripedView.swift in Sources */,
 				18FB6E222CA0982A003B6B0B /* ErrorCodes.swift in Sources */,
 				18A3B0152C8B2B9200870E0C /* GameInfo.swift in Sources */,
 				18735AA82C80B86D00486D28 /* RewindPS4_macOSApp.swift in Sources */,

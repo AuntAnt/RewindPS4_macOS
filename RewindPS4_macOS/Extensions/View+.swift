@@ -12,4 +12,15 @@ extension View {
     func loadingView(isLoading: Binding<Bool>) -> some View {
         modifier(LoadingFillModifier(isLoading: isLoading))
     }
+    
+    /// Animated stripes when view is selected
+    func selectView(isSelect: Bool) -> some View {
+        ZStack {
+            if isSelect {
+                AnimatedStripedView()
+            }
+            
+            self
+        }
+    }
 }

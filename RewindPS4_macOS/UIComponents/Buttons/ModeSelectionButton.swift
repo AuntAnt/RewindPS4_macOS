@@ -15,6 +15,16 @@ struct ModeSelectionButton: View {
     var isEnable: Bool
     var action: () -> Void
     
+    private var opacity: Double {
+        if isEnable && !isSelected {
+            return 0.8
+        } else if isSelected {
+            return 1
+        } else {
+            return 0.3
+        }
+    }
+    
     var body: some View {
         Rectangle()
             .overlay {
@@ -32,15 +42,14 @@ struct ModeSelectionButton: View {
                 }
                 .padding(.horizontal, 8)
             }
+            .selectView(isSelect: isSelected)
             .foregroundStyle(.black.opacity(0.4))
-            .border(.gray, width: isSelected ? 2 : 0.5)
-            .scaleEffect(isSelected ? CGSize(square: 1.01) : CGSize(square: 1))
             .onTapGesture {
                 if isEnable {                
                     action()
                 }
             }
-            .opacity(isEnable ? 1 : 0.3)
+            .opacity(opacity)
     }
 }
 
