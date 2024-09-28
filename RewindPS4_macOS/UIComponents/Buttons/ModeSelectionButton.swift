@@ -15,6 +15,8 @@ struct ModeSelectionButton: View {
     var isEnable: Bool
     var action: () -> Void
     
+    @State private var isHover = false
+    
     private var opacity: Double {
         if isEnable && !isSelected {
             return 0.8
@@ -48,6 +50,10 @@ struct ModeSelectionButton: View {
                 if isEnable {                
                     action()
                 }
+            }
+            .scaleEffect(isHover && isEnable ? 1.02 : 1)
+            .onHover { hovering in
+                isHover = hovering
             }
             .opacity(opacity)
     }

@@ -41,7 +41,6 @@
 		18A3B0192C8B349A00870E0C /* Image+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A3B0182C8B349A00870E0C /* Image+.swift */; };
 		18A874F52C81D24F00725456 /* seiha.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 18A874F22C81D09A00725456 /* seiha.ttf */; };
 		18A874F82C81D55900725456 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A874F72C81D55900725456 /* Font+.swift */; };
-		18A874FA2C81D98600725456 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A874F92C81D98600725456 /* BackgroundView.swift */; };
 		18A874FE2C81E71B00725456 /* ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A874FD2C81E71B00725456 /* ImageName.swift */; };
 		18BE15572C90D69C000AE0A6 /* RewindPS4Proxy in Frameworks */ = {isa = PBXBuildFile; productRef = 18BE15562C90D69C000AE0A6 /* RewindPS4Proxy */; };
 		18D1B2FF2C98416A006B3E1E /* GuideLinkLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D1B2FE2C98416A006B3E1E /* GuideLinkLabel.swift */; };
@@ -117,7 +116,6 @@
 		18A3B0182C8B349A00870E0C /* Image+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+.swift"; sourceTree = "<group>"; };
 		18A874F22C81D09A00725456 /* seiha.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = seiha.ttf; sourceTree = "<group>"; };
 		18A874F72C81D55900725456 /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
-		18A874F92C81D98600725456 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		18A874FD2C81E71B00725456 /* ImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageName.swift; sourceTree = "<group>"; };
 		18D1B2FE2C98416A006B3E1E /* GuideLinkLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideLinkLabel.swift; sourceTree = "<group>"; };
 		18D1B3002C9841A6006B3E1E /* Links.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				1823CE042C821B8E00C80D12 /* InfoLabelView.swift */,
-				18A874F92C81D98600725456 /* BackgroundView.swift */,
 				18DF17EE2C960EA600D0B31D /* SpinnerView.swift */,
 				18D1B2FE2C98416A006B3E1E /* GuideLinkLabel.swift */,
 				180710842CA8717100F088E7 /* AnimatedStripedView.swift */,
@@ -447,7 +444,6 @@
 				18FB6E1A2C9E0ED2003B6B0B /* LogsScrollView.swift in Sources */,
 				18A3B0172C8B32F000870E0C /* GameInfoView.swift in Sources */,
 				18FB6E292CA0A9A0003B6B0B /* FAQViewModel.swift in Sources */,
-				18A874FA2C81D98600725456 /* BackgroundView.swift in Sources */,
 				18A874FE2C81E71B00725456 /* ImageName.swift in Sources */,
 				18FB6E202CA095C9003B6B0B /* FAQViewCell.swift in Sources */,
 				1823CE142C844F2400C80D12 /* CGSize+.swift in Sources */,

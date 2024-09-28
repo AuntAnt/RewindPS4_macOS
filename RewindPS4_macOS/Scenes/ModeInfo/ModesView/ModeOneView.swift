@@ -11,6 +11,7 @@ struct ModeOneView: View {
     
     @EnvironmentObject private var viewModel: DowngradingViewModel
     @FocusState private var isEditing: Bool
+    @State private var isHover = false
     
     var body: some View {
         VStack(spacing: 15) {
@@ -25,7 +26,7 @@ struct ModeOneView: View {
             TextField("", text: $viewModel.jsonLink, axis: .vertical)
                 .foregroundStyle(.infoText)
                 .frame(height: 85)
-                .textFieldStyle(PlainTextFieldStyle())
+                .textFieldStyle(.plain)
                 .padding(.horizontal, 4)
                 .multilineTextAlignment(.leading)
                 .lineLimit(5)
@@ -38,12 +39,15 @@ struct ModeOneView: View {
                     RoundedRectangle(cornerSize: CGSize(square: 5))
                         .stroke(lineWidth: 1)
                         .foregroundStyle(Color.gray)
-                        .shadow(color: .white, radius: isEditing ? 5 : 0)
+                        .shadow(color: .white, radius: isEditing || (isHover && !viewModel.isServerRunning) ? 5 : 0)
                 }
                 .onReceive(viewModel.$jsonLink.debounce(for: .seconds(1), scheduler: RunLoop.main)) { _ in
                     Task {
                         await viewModel.validateInput()
                     }
+                }
+                .onHover { hovering in
+                    isHover = hovering
                 }
             
             GameInfoView(gameInfo: $viewModel.gameInfo)
