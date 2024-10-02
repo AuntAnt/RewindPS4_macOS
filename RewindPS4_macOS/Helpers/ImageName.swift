@@ -6,7 +6,6 @@
 //
 
 enum ImageName {
-    static let background = "SoulDust"
     static let header = "kanban"
     static let nocover = "nocover"
     static let deviceBackground = "tanmatsu"

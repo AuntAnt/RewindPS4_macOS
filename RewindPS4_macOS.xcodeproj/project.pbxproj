@@ -25,6 +25,8 @@
 		1823CE1E2C84A5D100C80D12 /* ModeOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE1D2C84A5D100C80D12 /* ModeOneView.swift */; };
 		1823CE202C84A5E200C80D12 /* ModeTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE1F2C84A5E200C80D12 /* ModeTwoView.swift */; };
 		1823CE232C84B80E00C80D12 /* DowngradingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1823CE222C84B80E00C80D12 /* DowngradingViewModel.swift */; };
+		183B7D582CAD822E00BC49B7 /* ModeSelectionButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B7D572CAD822E00BC49B7 /* ModeSelectionButtonStyle.swift */; };
+		183B7D5A2CAD825500BC49B7 /* StartButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B7D592CAD825500BC49B7 /* StartButtonStyle.swift */; };
 		18735AA82C80B86D00486D28 /* RewindPS4_macOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18735AA72C80B86D00486D28 /* RewindPS4_macOSApp.swift */; };
 		18735AAA2C80B86D00486D28 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18735AA92C80B86D00486D28 /* ContentView.swift */; };
 		18735AAC2C80B87A00486D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18735AAB2C80B87A00486D28 /* Assets.xcassets */; };
@@ -99,6 +101,8 @@
 		1823CE1D2C84A5D100C80D12 /* ModeOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeOneView.swift; sourceTree = "<group>"; };
 		1823CE1F2C84A5E200C80D12 /* ModeTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeTwoView.swift; sourceTree = "<group>"; };
 		1823CE222C84B80E00C80D12 /* DowngradingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DowngradingViewModel.swift; sourceTree = "<group>"; };
+		183B7D572CAD822E00BC49B7 /* ModeSelectionButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSelectionButtonStyle.swift; sourceTree = "<group>"; };
+		183B7D592CAD825500BC49B7 /* StartButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonStyle.swift; sourceTree = "<group>"; };
 		18735AA72C80B86D00486D28 /* RewindPS4_macOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewindPS4_macOSApp.swift; sourceTree = "<group>"; };
 		18735AA92C80B86D00486D28 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		18735AAB2C80B87A00486D28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 		1823CE032C81F36700C80D12 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				183B7D562CAD821C00BC49B7 /* Styles */,
 				1823CDFE2C81F0A200C80D12 /* StartButton.swift */,
 				1823CE002C81F34B00C80D12 /* ModeSelectionButton.swift */,
 				18FB6E262CA09F8F003B6B0B /* DismissButton.swift */,
@@ -227,6 +232,15 @@
 				181403312C8F7F3C00E369D7 /* Logs.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		183B7D562CAD821C00BC49B7 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				183B7D572CAD822E00BC49B7 /* ModeSelectionButtonStyle.swift */,
+				183B7D592CAD825500BC49B7 /* StartButtonStyle.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 		18735A9B2C80B86D00486D28 = {
@@ -461,6 +475,8 @@
 				18A3B0192C8B349A00870E0C /* Image+.swift in Sources */,
 				1823CE192C84809700C80D12 /* Binding+.swift in Sources */,
 				1823CE172C844F8200C80D12 /* Mode.swift in Sources */,
+				183B7D582CAD822E00BC49B7 /* ModeSelectionButtonStyle.swift in Sources */,
+				183B7D5A2CAD825500BC49B7 /* StartButtonStyle.swift in Sources */,
 				1823CE052C821B8E00C80D12 /* InfoLabelView.swift in Sources */,
 				18735AB72C80B92C00486D28 /* ProxyServerView.swift in Sources */,
 				189319CB2C8C7FBE0030EFE0 /* Network.swift in Sources */,

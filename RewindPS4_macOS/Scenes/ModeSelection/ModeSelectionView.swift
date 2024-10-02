@@ -18,7 +18,13 @@ struct ModeSelectionView: View {
                 description: LocalizationKeys.mode1Desc.rawValue,
                 isSelected: viewModel.currentMode == .mode1,
                 isEnable: !viewModel.isServerRunning || viewModel.isServerRunning && viewModel.currentMode == .mode1,
-                action: { viewModel.currentMode = .mode1 }
+                action: {
+                    guard !viewModel.isServerRunning else {
+                        return
+                    }
+                    
+                    viewModel.currentMode = .mode1
+                }
             )
             
             ModeSelectionButton(
@@ -26,7 +32,11 @@ struct ModeSelectionView: View {
                 description: LocalizationKeys.mode2Desc.rawValue,
                 isSelected: viewModel.currentMode == .mode2,
                 isEnable: !viewModel.isServerRunning || viewModel.isServerRunning && viewModel.currentMode == .mode2,
-                action: { 
+                action: {
+                    guard !viewModel.isServerRunning else {
+                        return
+                    }
+                    
                     viewModel.currentMode = .mode2
                     Task {
                         await viewModel.changeMode()

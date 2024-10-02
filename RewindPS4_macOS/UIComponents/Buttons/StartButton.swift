@@ -13,27 +13,14 @@ struct StartButton: View {
     @Binding var attemptToStart: Bool
     var action: () -> Void
     
-    @State private var isHover = false
-    
     var body: some View {
-        Rectangle()
-            .frame(width: 400, height: 50)
-            .overlay {
-                Text(title)
-                    .foregroundStyle(.white)
-                    .font(.title2)
-            }
-            .foregroundStyle(.black)
-            .border(.accent, width: 1)
-            .shadow(color: .accent, radius: 3)
-            .scaleEffect(isHover && !attemptToStart ? 1.05 : 1)
-            .onHover(perform: { hovering in
-                isHover = hovering
-            })
-            .loadingView(isLoading: $attemptToStart)
-            .onTapGesture {
-                action()
-            }
+        Button(action: action, label: {
+            Text(title)
+                .foregroundStyle(.white)
+                .font(.title2)
+                .frame(width: 400, height: 50)
+        })
+        .buttonStyle(StartButtonStyle(attemptToStart: $attemptToStart))
     }
 }
 
