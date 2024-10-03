@@ -11,6 +11,7 @@ struct StartButton: View {
     
     @Binding var title: LocalizedStringKey
     @Binding var attemptToStart: Bool
+    let isActive: Bool
     var action: () -> Void
     
     var body: some View {
@@ -18,6 +19,7 @@ struct StartButton: View {
             Text(title)
                 .foregroundStyle(.white)
                 .font(.title2)
+                .selectView(isSelect: isActive)
                 .frame(width: 400, height: 50)
         })
         .buttonStyle(StartButtonStyle(attemptToStart: $attemptToStart))
@@ -25,7 +27,7 @@ struct StartButton: View {
 }
 
 #Preview {
-    StartButton(title: .constant(LocalizationKeys.startProxy.rawValue), attemptToStart: .constant(false)) {}
+    StartButton(title: .constant(LocalizationKeys.startProxy.rawValue), attemptToStart: .constant(false), isActive: false) {}
         .preferredColorScheme(.dark)
         .padding()
 }

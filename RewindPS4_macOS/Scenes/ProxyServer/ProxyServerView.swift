@@ -45,7 +45,11 @@ struct ProxyServerView: View {
                 .foregroundStyle(viewModel.isServerRunning ? .accent : .white)
                 .padding()
             
-            StartButton(title: $viewModel.buttonLabel, attemptToStart: $viewModel.attemptToStart) {
+            StartButton(
+                title: $viewModel.buttonLabel,
+                attemptToStart: $viewModel.attemptToStart,
+                isActive: viewModel.isServerRunning
+            ) {
                 viewModel.toggleServer()
             }
         }
