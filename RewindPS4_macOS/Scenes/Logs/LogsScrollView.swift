@@ -58,7 +58,7 @@ struct LogsScrollView: View {
             .white
         }
         
-        var third = AttributedString(parts[safe: 2] ?? "")
+        var third = AttributedString(parts[safe: 2]?.trimmingCharacters(in: .whitespacesAndNewlines) ?? "")
         third.foregroundColor = .infoText
         
         result.append(first)
