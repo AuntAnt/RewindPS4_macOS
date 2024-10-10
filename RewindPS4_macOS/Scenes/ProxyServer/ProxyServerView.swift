@@ -25,7 +25,6 @@ struct ProxyServerView: View {
                 // Local IP view
                 ServerInfoView(
                     title: LocalizationKeys.localIP.rawValue,
-                    isEditable: .constant(false),
                     value: $viewModel.localIp, 
                     color: viewModel.isServerRunning ? .accent : .infoText
                 )
@@ -33,7 +32,7 @@ struct ProxyServerView: View {
                 // Port view
                 ServerInfoView(
                     title: LocalizationKeys.port.rawValue,
-                    isEditable: $viewModel.isServerRunning.not,
+                    isEditable: !viewModel.isServerRunning,
                     isStepperNeeded: true,
                     value: $viewModel.port,
                     color: viewModel.isServerRunning ? .accent : .infoText
@@ -47,7 +46,7 @@ struct ProxyServerView: View {
             
             StartButton(
                 title: $viewModel.buttonLabel,
-                attemptToStart: $viewModel.attemptToStart,
+                attemptToStart: viewModel.attemptToStart,
                 isActive: viewModel.isServerRunning
             ) {
                 viewModel.toggleServer()

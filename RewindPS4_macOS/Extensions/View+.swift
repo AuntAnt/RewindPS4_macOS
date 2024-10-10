@@ -9,7 +9,7 @@ import SwiftUI
 
 extension View {
     /// Fill view when loading (for example Start button)
-    func loadingView(isLoading: Binding<Bool>) -> some View {
+    func loadingView(isLoading: Bool) -> some View {
         modifier(LoadingFillModifier(isLoading: isLoading))
     }
     
@@ -17,7 +17,8 @@ extension View {
     func selectView(isSelect: Bool) -> some View {
         ZStack {
             if isSelect {
-                AnimatedStripedView()
+//                AnimatedStripedView()
+                StripedView()
             }
             
             self

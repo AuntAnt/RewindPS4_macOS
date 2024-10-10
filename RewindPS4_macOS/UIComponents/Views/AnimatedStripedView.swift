@@ -8,18 +8,17 @@
 import SwiftUI
 
 struct AnimatedStripedView: View {
-    var stripeWidth: CGFloat = 15.0
-    var spacing: CGFloat = 15.0
+    var stripeWidth: CGFloat = 15
+    var spacing: CGFloat = 15
     var stripeColor: Color = .gray.opacity(0.3)
-    var backgroundColor: Color = .clear
-    var animationSpeed: Double = 10.0
-
+    var animationSpeed: Double = 10
+    
     var body: some View {
         GeometryReader { geometry in
             let size = geometry.size
             let diagonalSpacing = stripeWidth + spacing
-
-            TimelineView(.periodic(from: .now, by: 1/60)) { timeline in
+            
+            TimelineView(.periodic(from: .now, by: 1/15)) { timeline in
                 let currentTime = timeline.date.timeIntervalSinceReferenceDate
                 let animatedOffset = (currentTime * animationSpeed).truncatingRemainder(dividingBy: diagonalSpacing)
 
@@ -40,12 +39,11 @@ struct AnimatedStripedView: View {
                     )
                 }
             }
-            .background(backgroundColor)
         }
         .clipped()
     }
 }
 
 #Preview {
-    AnimatedStripedView(stripeColor: .gray, backgroundColor: .black)
+    AnimatedStripedView(stripeColor: .gray)
 }

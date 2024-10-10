@@ -65,7 +65,7 @@
         }
       }
     },
-    "1.Log error'Failed to start proxy server, please try another PORT. Try a few ports or restart the computer." : {
+    "1.Log error'Failed to start proxy server, please try another PORT'. Try a few ports or restart the computer." : {
       "localizations" : {
         "ja" : {
           "stringUnit" : {

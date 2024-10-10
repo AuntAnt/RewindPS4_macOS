@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GameInfoView: View {
     
-    @Binding var gameInfo: GameInfo?
+    var gameInfo: GameInfo?
     
     var body: some View {
         HStack {
@@ -25,31 +25,19 @@ struct GameInfoView: View {
             VStack(alignment: .leading, spacing: 0) {
                 InfoLabelView(
                     title: LocalizationKeys.gameName.rawValue,
-                    value: Binding(
-                        get: { gameInfo?.title },
-                        set: { _ in }
-                    )
+                    value: gameInfo?.title
                 )
                 InfoLabelView(
                     title: LocalizationKeys.gameIDRegion.rawValue,
-                    value: Binding(
-                        get: { gameInfo?.cusa },
-                        set: { _ in }
-                    )
+                    value: gameInfo?.cusa
                 )
                 InfoLabelView(
                     title: LocalizationKeys.lastVersion.rawValue,
-                    value: Binding(
-                        get: { gameInfo?.lastVersion },
-                        set: { _ in }
-                    )
+                    value: gameInfo?.lastVersion
                 )
                 InfoLabelView(
                     title: LocalizationKeys.downgradeVersion.rawValue,
-                    value: Binding(
-                        get: { gameInfo?.downgradeVersion },
-                        set: { _ in }
-                    )
+                    value: gameInfo?.downgradeVersion
                 )
             }
             .foregroundStyle(.descriptionText)
@@ -58,5 +46,5 @@ struct GameInfoView: View {
 }
 
 #Preview {
-    GameInfoView(gameInfo: .constant(nil))
+    GameInfoView(gameInfo: nil)
 }

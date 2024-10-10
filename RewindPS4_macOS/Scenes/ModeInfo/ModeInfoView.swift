@@ -12,7 +12,7 @@ struct ModeInfoView: View {
     @EnvironmentObject private var viewModel: DowngradingViewModel
     
     var body: some View {
-        VStack {
+        ZStack {
             switch viewModel.currentMode {
             case .mode0:
                 NoModeView()

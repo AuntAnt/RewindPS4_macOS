@@ -10,7 +10,7 @@ import SwiftUI
 struct LogsScrollView: View {
     
     @Binding var logs: [String]
-    @Binding var autoscroll: Bool
+    var autoscroll: Bool
     
     var body: some View {
         ScrollViewReader { proxy in

@@ -10,7 +10,7 @@ import SwiftUI
 struct StartButton: View {
     
     @Binding var title: LocalizedStringKey
-    @Binding var attemptToStart: Bool
+    var attemptToStart: Bool
     let isActive: Bool
     var action: () -> Void
     
@@ -22,12 +22,12 @@ struct StartButton: View {
                 .selectView(isSelect: isActive)
                 .frame(width: 400, height: 50)
         })
-        .buttonStyle(StartButtonStyle(attemptToStart: $attemptToStart))
+        .buttonStyle(StartButtonStyle(attemptToStart: attemptToStart))
     }
 }
 
 #Preview {
-    StartButton(title: .constant(LocalizationKeys.startProxy.rawValue), attemptToStart: .constant(false), isActive: false) {}
+    StartButton(title: .constant(LocalizationKeys.startProxy.rawValue), attemptToStart: false, isActive: false) {}
         .preferredColorScheme(.dark)
         .padding()
 }

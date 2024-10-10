@@ -181,7 +181,7 @@ final class DowngradingViewModel: ObservableObject {
         }
     }
     
-    // MARK: - Fetching logs every 2 seconds
+    // MARK: - Fetching logs every second
     
     private func fetchLogs() async {
         guard logsTimer == nil else {

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LoadingFillModifier: ViewModifier {
     
-    @Binding var isLoading: Bool
+    var isLoading: Bool
     @State private var fillProgress: CGFloat = 0.0
     
     func body(content: Content) -> some View {

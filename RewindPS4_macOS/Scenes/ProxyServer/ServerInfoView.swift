@@ -10,7 +10,7 @@ import SwiftUI
 struct ServerInfoView: View {
     
     let title: LocalizedStringKey
-    @Binding var isEditable: Bool
+    var isEditable = false
     var isStepperNeeded = false
     @Binding var value: String
     let color: Color
@@ -41,7 +41,7 @@ struct ServerInfoView: View {
 #Preview {
     ServerInfoView(
         title: "Label:",
-        isEditable: .constant(true),
+        isEditable: true,
         isStepperNeeded: true,
         value: .constant("8080"),
         color: .infoText

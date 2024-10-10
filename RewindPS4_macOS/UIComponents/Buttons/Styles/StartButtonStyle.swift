@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StartButtonStyle: ButtonStyle {
     
-    @Binding var attemptToStart: Bool
+    var attemptToStart: Bool
     @State private var isHover = false
     
     func makeBody(configuration: Configuration) -> some View {
@@ -18,7 +18,7 @@ struct StartButtonStyle: ButtonStyle {
             .border(.accent, width: 1)
             .shadow(color: .accent, radius: 3)
             .scaleEffect(isHover && !attemptToStart ? 1.02 : 1)
-            .loadingView(isLoading: $attemptToStart)
+            .loadingView(isLoading: attemptToStart)
             .onHover(perform: { hovering in
                 isHover = hovering
             })

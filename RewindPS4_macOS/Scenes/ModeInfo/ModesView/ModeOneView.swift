@@ -50,7 +50,7 @@ struct ModeOneView: View {
                     isHover = hovering
                 }
             
-            GameInfoView(gameInfo: $viewModel.gameInfo)
+            GameInfoView(gameInfo: viewModel.gameInfo)
         }
         .overlay(alignment: .center) {
             if viewModel.isGameInfoLoading {

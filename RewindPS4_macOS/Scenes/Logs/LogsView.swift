@@ -35,7 +35,7 @@ struct LogsView: View {
                 Color.gray.frame(height: 1)
             }
             
-            LogsScrollView(logs: $viewModel.logs, autoscroll: $viewModel.autoscroll)
+            LogsScrollView(logs: $viewModel.logs, autoscroll: viewModel.autoscroll)
         }
         .padding()
         .border(.gray, width: 1)
