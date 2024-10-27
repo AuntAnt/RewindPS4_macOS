@@ -18,7 +18,7 @@ struct GuideLinkLabel: View {
     }
     
     var body: some View {
-        Link(LocalizationKeys.guide.rawValue, destination: guideUrl)
+        Link(LocalizationKeys.guide, destination: guideUrl)
             .foregroundStyle(.accent)
             .underline(color: .accent)
     }

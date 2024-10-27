@@ -14,8 +14,8 @@ struct ModeSelectionView: View {
     var body: some View {
         VStack(spacing: 8) {
             ModeSelectionButton(
-                title: LocalizationKeys.mode1.rawValue,
-                description: LocalizationKeys.mode1Desc.rawValue,
+                title: LocalizationKeys.ModeSelection.mode1,
+                description: LocalizationKeys.ModeSelection.Description.mode1,
                 isSelected: viewModel.currentMode == .mode1,
                 isEnable: !viewModel.isServerRunning || viewModel.isServerRunning && viewModel.currentMode == .mode1,
                 action: {
@@ -28,8 +28,8 @@ struct ModeSelectionView: View {
             )
             
             ModeSelectionButton(
-                title: LocalizationKeys.mode2.rawValue,
-                description: LocalizationKeys.mode2Desc.rawValue,
+                title: LocalizationKeys.ModeSelection.mode2,
+                description: LocalizationKeys.ModeSelection.Description.mode2,
                 isSelected: viewModel.currentMode == .mode2,
                 isEnable: !viewModel.isServerRunning || viewModel.isServerRunning && viewModel.currentMode == .mode2,
                 action: {

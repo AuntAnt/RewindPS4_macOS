@@ -14,7 +14,7 @@ struct ModeTwoView: View {
     var body: some View {
         VStack {
             HStack {
-                Text(LocalizationKeys.introduce.rawValue)
+                Text(LocalizationKeys.Mode.Mode2.introduce)
                     .font(.seiha1)
                     .foregroundStyle(.title)
                 
@@ -22,8 +22,8 @@ struct ModeTwoView: View {
             }
             
             VStack(alignment: .leading) {
-                Text(LocalizationKeys.m2desc1.rawValue)
-                Text(LocalizationKeys.m2desc2.rawValue)
+                Text(LocalizationKeys.Mode.Mode2.description_1)
+                Text(LocalizationKeys.Mode.Mode2.description_2)
             }
             .foregroundStyle(.descriptionText)
             

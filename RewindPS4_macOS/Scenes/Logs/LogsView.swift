@@ -15,19 +15,19 @@ struct LogsView: View {
         VStack {
             VStack(spacing: 2) {
                 HStack {
-                    Text(LocalizationKeys.log.rawValue)
+                    Text(LocalizationKeys.Logs.log)
                         .font(.seiha1)
                         .foregroundStyle(.infoText)
                     
                     Spacer()
                     
                     Toggle(isOn: $viewModel.autoscroll, label: {
-                        Text(LocalizationKeys.autoScroll.rawValue)
+                        Text(LocalizationKeys.Logs.autoScroll)
                             .foregroundStyle(.white)
                     })
                     
                     Toggle(isOn: $viewModel.logFiltering, label: {
-                        Text(LocalizationKeys.logFiltering.rawValue)
+                        Text(LocalizationKeys.Logs.logFiltering)
                             .foregroundStyle(.white)
                     })
                 }

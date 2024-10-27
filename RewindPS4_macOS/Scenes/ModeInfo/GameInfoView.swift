@@ -24,19 +24,19 @@ struct GameInfoView: View {
             
             VStack(alignment: .leading, spacing: 0) {
                 InfoLabelView(
-                    title: LocalizationKeys.gameName.rawValue,
+                    title: LocalizationKeys.Mode.Mode1.gameName,
                     value: gameInfo?.title
                 )
                 InfoLabelView(
-                    title: LocalizationKeys.gameIDRegion.rawValue,
+                    title: LocalizationKeys.Mode.Mode1.gameIDRegion,
                     value: gameInfo?.cusa
                 )
                 InfoLabelView(
-                    title: LocalizationKeys.lastVersion.rawValue,
+                    title: LocalizationKeys.Mode.Mode1.lastVersion,
                     value: gameInfo?.lastVersion
                 )
                 InfoLabelView(
-                    title: LocalizationKeys.downgradeVersion.rawValue,
+                    title: LocalizationKeys.Mode.Mode1.downgradeVersion,
                     value: gameInfo?.downgradeVersion
                 )
             }

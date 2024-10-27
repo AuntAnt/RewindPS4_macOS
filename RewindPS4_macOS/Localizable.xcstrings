@@ -17,152 +17,14 @@
         }
       }
     },
-    "😊 JSON link is correct" : {
+    "Device.Connected" : {
       "localizations" : {
-        "ja" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "😊 JSONリンクが正しい"
+            "value" : "Connected Device"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "😊 JSON 输入格式正确"
-          }
-        }
-      }
-    },
-    "😬 JSON link is incorrect" : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "😬 JSONリンクが正しくありません"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "😬 JSON 输入格式错误"
-          }
-        }
-      }
-    },
-    "1.Block the update server to bypass patch detection and download only the version 1.0 of the game." : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1.更新サーバーをブロックし、パッチ検出を回避し、1.0バージョンのゲームのみをダウンロードします。"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1.通过屏蔽更新服务器，绕开补丁检测，只下载1.0版本游戏。"
-          }
-        }
-      }
-    },
-    "1.Log error'Failed to start proxy server, please try another PORT'. Try a few ports or restart the computer." : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1.ログエラー Failed to start proxy server, please try another PORT 、いくつかのポートを試すか、コンピュータを再起動してください。"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1.日志报错 Failed to start proxy server, please try another PORT ,多换几次端口，或重启电脑再试。"
-          }
-        }
-      }
-    },
-    "2.Due to certain reasons, this mode is only applicable for PS4. Using it on PS5 may result in downloading the latest version or an error code NW-102650-4." : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "2.いくつかの理由から、このモードはPS4でのみ使用できます。PS5でこのモードを使用すると、最新バージョンがダウンロードされるか、エラーコードNW-102650-4が表示されます。"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "2.由于一些原因，这个模式只能在PS4使用，PS5用这个模式会下载最新版本，或者报错NW-102650-4。"
-          }
-        }
-      }
-    },
-    "2.The local IP is not the correct segment, check if the computer has a virtual NIC, if it does, temporarily disable it." : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "2.ローカルIPが正しいセグメントを表示していない場合、仮想NICが存在するかどうかを確認し、存在する場合は一時的に無効にしてください。"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "2.本地IP显示的不是正确的网段，这时候检查电脑是不是存在虚拟网卡，如果有，请暂时禁用。"
-          }
-        }
-      }
-    },
-    "Auto Scroll" : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "自動スクロール"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "自动滚动"
-          }
-        }
-      }
-    },
-    "Block the update server to prevent game updates, download version 1.0 of the PS4 game (only applicable to PS4 consoles)" : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "アップデートサーバーをブロックしてゲームのアップデートを防ぎ、PS4ゲームのバージョン1.0をダウンロードします（PS4にのみ適用）"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "屏蔽更新服务器以防止游戏更新，下载PS4游戏的1.0版本（仅适用于PS4主机）"
-          }
-        }
-      }
-    },
-    "Blocked by update, please try again" : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "更新のブロックによりネットワークエラーが発生する可能性があります。何度かダウンロードを試みてください。"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "屏蔽更新可能造成的网络错误，请多次尝试下载"
-          }
-        }
-      }
-    },
-    "Connected Device" : {
-      "localizations" : {
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -177,56 +39,80 @@
         }
       }
     },
-    "Downgrade Version:" : {
+    "Device.Waiting" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waiting"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ダウングレードバージョン"
+            "value" : "待機中"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "降级版本"
+            "value" : "等待中"
           }
         }
       }
     },
-    "Encountered a special game that cannot be downgraded. Such games have a smaller size after a certain update, so they cannot be downgraded on PS5, only on PS4, like SKUL HERO SLAYER,SYPHON FILTER 3. Refer to the user guide for details." : {
+    "Error.Alert.IncorrectJSON" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter the correct JSON link"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "特定のダウングレードできないゲームに遭遇しました。このようなゲームは、ある更新後に容量が元より小さくなったため、PS5ではダウングレードできず、PS4でのみダウングレード可能です。詳細は使用ガイドを参照してください。"
+            "value" : "JSONリンクを入力"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "遇到特殊的无法降级的游戏，此类游戏因为某次游戏更新后造成容量比原来的小，所以在PS5无法降级，只能在PS4降级,如《小骨 英雄杀手》、《虹吸战士3》详见使用指南。"
+            "value" : "请输入正确的JSON链接"
           }
         }
       }
     },
-    "Enter the patch link to download the specified version of the PS4 game (applicable to PS4/PS5 consoles)" : {
+    "Error.Alert.PortUsed" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Port is occupied, please enter a new port (1024-65535)"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "パッチリンクを入力して、指定されたバージョンのPS4ゲームをダウンロードします（PS4/PS5に適用）"
+            "value" : "ポートが使用中です、変更してください(1024-65535)"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "输入游戏版本的补丁链接，下载指定版本的PS4游戏,（适用于PS4/PS5主机）"
+            "value" : "端口已被占用，请更换端口(1024-65535)"
           }
         }
       }
     },
-    "Error" : {
+    "Error.Error" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -241,50 +127,222 @@
         }
       }
     },
-    "Game ID & Region:" : {
+    "FAQ.Error.Other" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Other problems"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ゲームIDと地域"
+            "value" : "その他の問題"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "游戏ID - 区域"
+            "value" : "其他问题"
           }
         }
       }
     },
-    "Game Name:" : {
+    "FAQ.Error.Other.OtherError_1" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1.Log error'Failed to start proxy server, please try another PORT'. Try a few ports or restart the computer."
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ゲーム名"
+            "value" : "1.ログエラー Failed to start proxy server, please try another PORT 、いくつかのポートを試すか、コンピュータを再起動してください。"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "游戏名称"
+            "value" : "1.日志报错 Failed to start proxy server, please try another PORT ,多换几次端口，或重启电脑再试。"
           }
         }
       }
     },
-    "INTRODUCE" : {
+    "FAQ.Error.Other.OtherError_2" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2.The local IP is not the correct segment, check if the computer has a virtual NIC, if it does, temporarily disable it."
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "紹介"
+            "value" : "2.ローカルIPが正しいセグメントを表示していない場合、仮想NICが存在するかどうかを確認し、存在する場合は一時的に無効にしてください。"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "介紹"
+            "value" : "2.本地IP显示的不是正确的网段，这时候检查电脑是不是存在虚拟网卡，如果有，请暂时禁用。"
+          }
+        }
+      }
+    },
+    "FAQ.Error.PS4.BlockedPS4" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unable to connect to the PS4 game update server, check update failed"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PS4ゲーム更新サーバーに接続できず、更新の検出に失敗しました"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法连接到PS4游戏更新服务器,检测更新失败"
+          }
+        }
+      }
+    },
+    "FAQ.Error.PS4.NetError" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blocked by update, please try again"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更新のブロックによりネットワークエラーが発生する可能性があります。何度かダウンロードを試みてください。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "屏蔽更新可能造成的网络错误，请多次尝试下载"
+          }
+        }
+      }
+    },
+    "FAQ.Error.PS5.Blocked" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unable to connect to the PS4 game update server (this error prevents PS5 from downloading version 1.0)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PS4ゲーム更新サーバーに接続できません（このエラーによりPS5はバージョン1.0をダウンロードできません）"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法连接到PS4游戏更新服务器（此错误让PS5无法下载1.0版本），请勿在PS5主机使用模式2"
+          }
+        }
+      }
+    },
+    "FAQ.Error.PS5.Blocked_2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PS4 update server address is blocked by DNS error."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PS4更新サーバーがDNSエラーで接続できません。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PS4更新服务器地址被DNS错误解析。"
+          }
+        }
+      }
+    },
+    "FAQ.Error.PS5.CUSAMismatch" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The game's CUSA ID does not match(different version). For example, trying to download the EU version but entering the US version JSON."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ゲームのCUSA IDが一致しません。例えば、JP版をダウンロードする場合にUS版のjsonを入力した場合。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "游戏的CUSA ID（即版本）不一致，比如要下载亚版，却输入了日版的json。"
+          }
+        }
+      }
+    },
+    "FAQ.Error.PS5.SpecialIssue" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Encountered a special game that cannot be downgraded. Such games have a smaller size after a certain update, so they cannot be downgraded on PS5, only on PS4, like SKUL HERO SLAYER,SYPHON FILTER 3. Refer to the user guide for details."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "特定のダウングレードできないゲームに遭遇しました。このようなゲームは、ある更新後に容量が元より小さくなったため、PS5ではダウングレードできず、PS4でのみダウングレード可能です。詳細は使用ガイドを参照してください。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "遇到特殊的无法降级的游戏，此类游戏因为某次游戏更新后造成容量比原来的小，所以在PS5无法降级，只能在PS4降级,如《小骨 英雄杀手》、《虹吸战士3》详见使用指南。"
+          }
+        }
+      }
+    },
+    "FAQ.SeeFAQ" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SEE FAQ"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "よくある使用問題"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "常见报错"
           }
         }
       }
@@ -305,40 +363,36 @@
         }
       }
     },
-    "Last Version:" : {
+    "Logs.AutoScroll" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auto Scroll"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "最新バージョン"
+            "value" : "自動スクロール"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "最新版本"
+            "value" : "自动滚动"
           }
         }
       }
     },
-    "Local IP" : {
+    "Logs.Log" : {
       "localizations" : {
-        "ja" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ローカルIP"
+            "value" : "LOG"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "本地IP"
-          }
-        }
-      }
-    },
-    "LOG" : {
-      "localizations" : {
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -353,8 +407,14 @@
         }
       }
     },
-    "Log Filtering" : {
+    "Logs.LogFiltering" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Log Filtering"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -369,40 +429,14 @@
         }
       }
     },
-    "MODE-1" : {
+    "Logs.NoLogsAvailable" : {
       "localizations" : {
-        "ja" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "モード-1"
+            "value" : "No logs available"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "模式-1"
-          }
-        }
-      }
-    },
-    "MODE-2" : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "モード-2"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "模式-2"
-          }
-        }
-      }
-    },
-    "No logs available" : {
-      "localizations" : {
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -417,24 +451,36 @@
         }
       }
     },
-    "Other problems" : {
+    "Mode.Mode_1.DowngradeVersion" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Downgrade Version:"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "その他の問題"
+            "value" : "ダウングレードバージョン"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "其他问题"
+            "value" : "降级版本"
           }
         }
       }
     },
-    "Please enter JSON link:" : {
+    "Mode.Mode_1.EnterJSONLink" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter JSON link:"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -449,40 +495,212 @@
         }
       }
     },
-    "Please enter the correct JSON link" : {
+    "Mode.Mode_1.GameIDRegion" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Game ID & Region:"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "JSONリンクを入力"
+            "value" : "ゲームIDと地域"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "请输入正确的JSON链接"
+            "value" : "游戏ID - 区域"
           }
         }
       }
     },
-    "Please enter the JSON link:" : {
+    "Mode.Mode_1.GameName" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Game Name:"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "JSONリンクを入力してください："
+            "value" : "ゲーム名"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "请输入json链接："
+            "value" : "游戏名称"
           }
         }
       }
     },
-    "Please select any mode" : {
+    "Mode.Mode_1.JsonCorrect" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "😊 JSON link is correct"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "😊 JSONリンクが正しい"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "😊 JSON 输入格式正确"
+          }
+        }
+      }
+    },
+    "Mode.Mode_1.JsonError" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "😬 JSON link is incorrect"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "😬 JSONリンクが正しくありません"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "😬 JSON 输入格式错误"
+          }
+        }
+      }
+    },
+    "Mode.Mode_1.LastVersion" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last Version:"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最新バージョン"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最新版本"
+          }
+        }
+      }
+    },
+    "Mode.Mode_1.WaitingInfo" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waiting..."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "待機中"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "等待获取"
+          }
+        }
+      }
+    },
+    "Mode.Mode_2.Description_1" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter the patch link to download the specified version of the PS4 game (applicable to PS4/PS5 consoles)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1.更新サーバーをブロックし、パッチ検出を回避し、1.0バージョンのゲームのみをダウンロードします。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1.通过屏蔽更新服务器，绕开补丁检测，只下载1.0版本游戏。"
+          }
+        }
+      }
+    },
+    "Mode.Mode_2.Description_2" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Block the update server to prevent game updates, download version 1.0 of the PS4 game (only applicable to PS4 consoles)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2.いくつかの理由から、このモードはPS4でのみ使用できます。PS5でこのモードを使用すると、最新バージョンがダウンロードされるか、エラーコードNW-102650-4が表示されます。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2.由于一些原因，这个模式只能在PS4使用，PS5用这个模式会下载最新版本，或者报错NW-102650-4。"
+          }
+        }
+      }
+    },
+    "Mode.Mode_2.Introduce" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "INTRODUCE"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "紹介"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "介紹"
+          }
+        }
+      }
+    },
+    "Mode.SelectAnyMode" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please select any mode"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -497,66 +715,90 @@
         }
       }
     },
-    "PORT" : {
+    "ModeSelection.Description.Mode_1" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter the patch link to download the specified version of the PS4 game (applicable to PS4/PS5 consoles)"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ポート番号"
+            "value" : "パッチリンクを入力して、指定されたバージョンのPS4ゲームをダウンロードします（PS4/PS5に適用）"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "端口"
+            "value" : "输入游戏版本的补丁链接，下载指定版本的PS4游戏,（适用于PS4/PS5主机）"
           }
         }
       }
     },
-    "Port is occupied, please enter a new port (1024-65535)" : {
+    "ModeSelection.Description.Mode_2" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Block the update server to prevent game updates, download version 1.0 of the PS4 game (only applicable to PS4 consoles)"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ポートが使用中です、変更してください(1024-65535)"
+            "value" : "アップデートサーバーをブロックしてゲームのアップデートを防ぎ、PS4ゲームのバージョン1.0をダウンロードします（PS4にのみ適用）"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "端口已被占用，请更换端口(1024-65535)"
+            "value" : "屏蔽更新服务器以防止游戏更新，下载PS4游戏的1.0版本（仅适用于PS4主机）"
           }
         }
       }
     },
-    "PROXY SERVER" : {
+    "ModeSelection.Mode_1" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MODE-1"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "プロキシサーバー"
+            "value" : "モード-1"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "代理服務器"
+            "value" : "模式-1"
           }
         }
       }
     },
-    "PS4 update server address is blocked by DNS error." : {
+    "ModeSelection.Mode_2" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MODE-2"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "PS4更新サーバーがDNSエラーで接続できません。"
+            "value" : "モード-2"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "PS4更新服务器地址被DNS错误解析。"
+            "value" : "模式-2"
           }
         }
       }
@@ -593,72 +835,14 @@
         }
       }
     },
-    "SEE FAQ" : {
+    "ServerInfo.Button.Start" : {
       "localizations" : {
-        "ja" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "よくある使用問題"
+            "value" : "Start Proxy"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "常见报错"
-          }
-        }
-      }
-    },
-    "Server is not running" : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "サーバーが実行されていません"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "代理服务器未运行"
-          }
-        }
-      }
-    },
-    "Server is running" : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "サーバーが実行中です"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "代理服务器正在运行"
-          }
-        }
-      }
-    },
-    "Start failed, close other programs to avoid network conflicts, or change port" : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "起動失敗。他のプログラムを終了してネットワークの競合を避けるか、ポートを変更してください。"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "启动失败，关闭其他程序避免网络冲突，或更换端口 "
-          }
-        }
-      }
-    },
-    "Start Proxy" : {
-      "localizations" : {
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -673,8 +857,14 @@
         }
       }
     },
-    "Stop Proxy" : {
+    "ServerInfo.Button.Stop" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stop Proxy"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -689,18 +879,112 @@
         }
       }
     },
-    "The game's CUSA ID does not match(different version). For example, trying to download the EU version but entering the US version JSON." : {
+    "ServerInfo.LocalIP" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Local IP"
+          }
+        },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ゲームのCUSA IDが一致しません。例えば、JP版をダウンロードする場合にUS版のjsonを入力した場合。"
+            "value" : "ローカルIP"
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "游戏的CUSA ID（即版本）不一致，比如要下载亚版，却输入了日版的json。"
+            "value" : "本地IP"
+          }
+        }
+      }
+    },
+    "ServerInfo.NotRunning" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Server is not running"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サーバーが実行されていません"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理服务器未运行"
+          }
+        }
+      }
+    },
+    "ServerInfo.Port" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PORT"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ポート番号"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "端口"
+          }
+        }
+      }
+    },
+    "ServerInfo.ProxyServer" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PROXY SERVER"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プロキシサーバー"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理服務器"
+          }
+        }
+      }
+    },
+    "ServerInfo.Running" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Server is running"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サーバーが実行中です"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "代理服务器正在运行"
           }
         }
       }
@@ -721,56 +1005,14 @@
         }
       }
     },
-    "TYPE: %@" : {
+    "UserGuide" : {
       "localizations" : {
-        "ja" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "デバイス %@"
+            "value" : "User Guide"
           }
         },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "机型 %@"
-          }
-        }
-      }
-    },
-    "Unable to connect to the PS4 game update server (this error prevents PS5 from downloading version 1.0)" : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "PS4ゲーム更新サーバーに接続できません（このエラーによりPS5はバージョン1.0をダウンロードできません）"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "无法连接到PS4游戏更新服务器（此错误让PS5无法下载1.0版本），请勿在PS5主机使用模式2"
-          }
-        }
-      }
-    },
-    "Unable to connect to the PS4 game update server, check update failed" : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "PS4ゲーム更新サーバーに接続できず、更新の検出に失敗しました"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "无法连接到PS4游戏更新服务器,检测更新失败"
-          }
-        }
-      }
-    },
-    "User Guide" : {
-      "localizations" : {
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
@@ -781,38 +1023,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "使用指南"
-          }
-        }
-      }
-    },
-    "Waiting" : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "待機中"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "等待中"
-          }
-        }
-      }
-    },
-    "Waiting..." : {
-      "localizations" : {
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "待機中"
-          }
-        },
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "等待获取"
           }
         }
       }

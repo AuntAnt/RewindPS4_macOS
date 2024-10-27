@@ -13,7 +13,7 @@ struct FAQView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(LocalizationKeys.errorCode.rawValue)
+            Text(LocalizationKeys.FAQ.seeFAQ)
                 .foregroundStyle(.title)
                 .font(.title2)
             
@@ -39,12 +39,12 @@ struct FAQView: View {
                     
                     // MARK: - Other errors
                     
-                    Text(LocalizationKeys.otherError.rawValue)
+                    Text(LocalizationKeys.FAQ.Error.Other.other)
                         .font(.title3)
                         .foregroundStyle(.infoText)
                     
                     ForEach(viewModel.getOtherErrors(), id: \.self) { error in
-                        Text(error.rawValue)
+                        Text(error)
                             .lineLimit(3)
                             .font(.title3)
                             .foregroundStyle(.descriptionText)

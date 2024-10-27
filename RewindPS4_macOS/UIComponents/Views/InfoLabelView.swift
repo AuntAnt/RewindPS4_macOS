@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InfoLabelView: View {
     
-    let title: LocalizedStringKey
+    let title: String
     var value: String?
     
     var body: some View {
@@ -32,7 +32,7 @@ struct InfoLabelView: View {
                             Text(value)
                                 .foregroundStyle(.accent)
                         } else {
-                            Text(LocalizationKeys.waitingInfo.rawValue)
+                            Text(LocalizationKeys.Mode.Mode1.waitingInfo)
                                 .foregroundStyle(.accent)
                         }
                     }

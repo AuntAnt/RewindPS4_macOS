@@ -13,8 +13,8 @@ final class DowngradingViewModel: ObservableObject {
     
     // MARK: - Connected client
     
-    @Published var latestIp = "Waiting"
-    @Published var device = "Waiting"
+    @Published var latestIp = LocalizationKeys.Device.waiting
+    @Published var device = LocalizationKeys.Device.waiting
     private var clientTimer: Timer?
     
     // MARK: - Logs
@@ -41,7 +41,7 @@ final class DowngradingViewModel: ObservableObject {
     // MARK: - Mode info
     
     @Published var jsonLink = ""
-    @Published var inputMessage = LocalizationKeys.enterJSONLink.rawValue
+    @Published var inputMessage = LocalizationKeys.Mode.Mode1.enterJSONLink
     @Published var gameInfo: GameInfo?
     @Published var isGameInfoLoading = false
      
@@ -50,9 +50,9 @@ final class DowngradingViewModel: ObservableObject {
     @Published var localIp = ""
     @Published var port = "8080"
     @Published var isError = false
-    @Published var buttonLabel = LocalizationKeys.startProxy.rawValue
-    @Published var serverStateLabel = LocalizationKeys.notRunning.rawValue
-    @Published var alertMessage: LocalizedStringKey?
+    @Published var buttonLabel = LocalizationKeys.ServerInfo.Button.start
+    @Published var serverStateLabel = LocalizationKeys.ServerInfo.notRunning
+    @Published var alertMessage: String?
     @Published var isServerRunning = false
     @Published var attemptToStart = false
     
@@ -82,23 +82,23 @@ final class DowngradingViewModel: ObservableObject {
                 let _ = try await proxy.setMode(currentMode, "")
             } catch {
                 isError = true
-                alertMessage = LocalizedStringKey(error.localizedDescription)
+                alertMessage = error.localizedDescription
             }
         }
     }
     
     func validateInput() async {
         guard !jsonLink.isEmpty else {
-            inputMessage = LocalizationKeys.enterJSONLink.rawValue
+            inputMessage = LocalizationKeys.Mode.Mode1.enterJSONLink
             gameInfo = nil
             return
         }
         
         if network.isValidInput(jsonLink: jsonLink) {
-            inputMessage = LocalizationKeys.jsonCorrect.rawValue
+            inputMessage = LocalizationKeys.Mode.Mode1.jsonCorrect
             await setMode()
         } else {
-            inputMessage = LocalizationKeys.jsonError.rawValue
+            inputMessage = LocalizationKeys.Mode.Mode1.jsonError
             gameInfo = nil
         }
     }
@@ -118,31 +118,31 @@ final class DowngradingViewModel: ObservableObject {
     private func startProxy() {
         if currentMode == .mode0 {
             isError = true
-            serverStateLabel = LocalizationKeys.notRunning.rawValue
-            alertMessage = LocalizationKeys.pleaseSelectAnyMode.rawValue
+            serverStateLabel = LocalizationKeys.ServerInfo.notRunning
+            alertMessage = LocalizationKeys.Mode.pleaseSelectAnyMode
         } else if currentMode == .mode1, !network.isValidInput(jsonLink: jsonLink) {
             isError = true
-            serverStateLabel = LocalizationKeys.notRunning.rawValue
-            alertMessage = LocalizationKeys.alertIncorrectJson.rawValue
+            serverStateLabel = LocalizationKeys.ServerInfo.notRunning
+            alertMessage = LocalizationKeys.Error.Alert.incorrectJson
         } else if network.isOccupied(port: port) {
             isError = true
-            serverStateLabel = LocalizationKeys.notRunning.rawValue
-            alertMessage = LocalizationKeys.portUsed.rawValue
+            serverStateLabel = LocalizationKeys.ServerInfo.notRunning
+            alertMessage = LocalizationKeys.Error.Alert.portUsed
         } else {
             attemptToStart = true
             Task {
                 do {
                     try await proxy.startProxy(on: port)
                     isServerRunning = true
-                    buttonLabel = LocalizationKeys.stopProxy.rawValue
-                    serverStateLabel = LocalizationKeys.running.rawValue
+                    buttonLabel = LocalizationKeys.ServerInfo.Button.stop
+                    serverStateLabel = LocalizationKeys.ServerInfo.running
                 } catch {
                     isError = true
-                    alertMessage = LocalizedStringKey(error.localizedDescription)
+                    alertMessage = error.localizedDescription
                     
                     isServerRunning = false
-                    buttonLabel = LocalizationKeys.startProxy.rawValue
-                    serverStateLabel = LocalizationKeys.notRunning.rawValue
+                    buttonLabel = LocalizationKeys.ServerInfo.Button.start
+                    serverStateLabel = LocalizationKeys.ServerInfo.notRunning
                 }
                 
                 attemptToStart = false
@@ -161,8 +161,8 @@ final class DowngradingViewModel: ObservableObject {
         stopFetchingLogs()
         proxy.stopProxy()
         isServerRunning = false
-        buttonLabel = LocalizationKeys.startProxy.rawValue
-        serverStateLabel = LocalizationKeys.notRunning.rawValue
+        buttonLabel = LocalizationKeys.ServerInfo.Button.start
+        serverStateLabel = LocalizationKeys.ServerInfo.notRunning
     }
     
     private func setMode() async {
@@ -177,7 +177,7 @@ final class DowngradingViewModel: ObservableObject {
             isGameInfoLoading = false
         } catch {
             isError = true
-            alertMessage = LocalizedStringKey(error.localizedDescription) 
+            alertMessage = error.localizedDescription
         }
     }
     
@@ -228,10 +228,10 @@ final class DowngradingViewModel: ObservableObject {
                 let result = try? await self.logging.fetchClientStatus()
                 
                 if let result {
-                    self.latestIp = result.clientActive ? result.latestClientIP : "Waiting"
+                    self.latestIp = result.clientActive ? result.latestClientIP : LocalizationKeys.Device.waiting
                     self.device = result.clientActive
                         ? self.proxy.detectConnectedDevice(result.latestClientUserAgent)
-                        : "Waiting"
+                        : LocalizationKeys.Device.waiting
                 }
             }
         }
@@ -240,7 +240,7 @@ final class DowngradingViewModel: ObservableObject {
     private func stopFetchingLogs() {
         clientTimer?.invalidate()
         clientTimer = nil
-        latestIp = "Waiting"
-        device = "Waiting"
+        latestIp = LocalizationKeys.Device.waiting
+        device = LocalizationKeys.Device.waiting
     }
 }

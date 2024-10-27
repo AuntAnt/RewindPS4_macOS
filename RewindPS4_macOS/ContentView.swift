@@ -35,7 +35,7 @@ struct ContentView: View {
             // MARK: - FAQ + user guide
             HStack() {
                 Spacer()
-                Text(LocalizationKeys.errorCode.rawValue)
+                Text(LocalizationKeys.FAQ.seeFAQ)
                     .foregroundStyle(.accent)
                     .onTapGesture {
                         faqViewModel.isShowingFAQ = true

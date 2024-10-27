@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StartButton: View {
     
-    @Binding var title: LocalizedStringKey
+    @Binding var title: String
     var attemptToStart: Bool
     let isActive: Bool
     var action: () -> Void
@@ -27,7 +27,7 @@ struct StartButton: View {
 }
 
 #Preview {
-    StartButton(title: .constant(LocalizationKeys.startProxy.rawValue), attemptToStart: false, isActive: false) {}
+    StartButton(title: .constant(LocalizationKeys.ServerInfo.Button.start), attemptToStart: false, isActive: false) {}
         .preferredColorScheme(.dark)
         .padding()
 }

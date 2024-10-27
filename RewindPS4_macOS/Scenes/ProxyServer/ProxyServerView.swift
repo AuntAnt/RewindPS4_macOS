@@ -14,7 +14,7 @@ struct ProxyServerView: View {
     var body: some View {
         VStack {
             HStack {
-                Text(LocalizationKeys.proxyServer.rawValue)
+                Text(LocalizationKeys.ServerInfo.proxyServer)
                     .font(.seiha1)
                     .foregroundStyle(.title)
                 
@@ -24,14 +24,14 @@ struct ProxyServerView: View {
             VStack(alignment: .trailing) {
                 // Local IP view
                 ServerInfoView(
-                    title: LocalizationKeys.localIP.rawValue,
-                    value: $viewModel.localIp, 
+                    title: LocalizationKeys.ServerInfo.localIP,
+                    value: $viewModel.localIp,
                     color: viewModel.isServerRunning ? .accent : .infoText
                 )
                 
                 // Port view
                 ServerInfoView(
-                    title: LocalizationKeys.port.rawValue,
+                    title: LocalizationKeys.ServerInfo.port,
                     isEditable: !viewModel.isServerRunning,
                     isStepperNeeded: true,
                     value: $viewModel.port,
@@ -52,7 +52,7 @@ struct ProxyServerView: View {
                 viewModel.toggleServer()
             }
         }
-        .alert(LocalizationKeys.error.rawValue, isPresented: $viewModel.isError, actions: {}) {
+        .alert(LocalizationKeys.Error.error, isPresented: $viewModel.isError, actions: {}) {
             Text(viewModel.alertMessage ?? "")
         }
         .padding()

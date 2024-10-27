@@ -15,7 +15,7 @@ struct ErrorCodeInfo: Identifiable {
     var id = UUID()
     
     let code: ErrorCode
-    let description: LocalizationKeys
+    let description: String
 }
 
 enum PS5ErrorCode: ErrorCode {
