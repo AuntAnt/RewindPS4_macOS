@@ -17,7 +17,6 @@ extension View {
     func selectView(isSelect: Bool) -> some View {
         ZStack {
             if isSelect {
-//                AnimatedStripedView()
                 StripedView()
             }
             

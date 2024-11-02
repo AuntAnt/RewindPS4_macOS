@@ -29,23 +29,20 @@ struct StripedView: View {
     }
     
     var body: some View {
-        StripedShape(offset: animationOffset, stripeWidth: viewModel.stripeWidth, spacing: viewModel.spacing)
-            .fill(viewModel.stripeColor)
-            .onAppear {
-                withAnimation(
-                    .linear(duration: diagonalSpacing / viewModel.animationSpeed)
-                    .repeatForever(autoreverses: false)
-                ) {
-                    animationOffset = diagonalSpacing
-                }
+        Rectangle()
+            .mask {
+                StripedShape(offset: animationOffset, stripeWidth: viewModel.stripeWidth, spacing: viewModel.spacing)
+                    .fill(viewModel.stripeColor)
+                    .onAppear {
+                        withAnimation(
+                            .linear(duration: diagonalSpacing / viewModel.animationSpeed)
+                            .repeatForever(autoreverses: false)
+                        ) {
+                            animationOffset = diagonalSpacing
+                        }
+                    }
+                    .clipped()
             }
-        // TODO: - here can try to disable animation
-//            .transaction { transaction in
-//                transaction.animation =
-//                    .linear(duration: diagonalSpacing / viewModel.animationSpeed)
-//                    .repeatForever(autoreverses: false)
-//            }
-            .clipped()
     }
 }
 

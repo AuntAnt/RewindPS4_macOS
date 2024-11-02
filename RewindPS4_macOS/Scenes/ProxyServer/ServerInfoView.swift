@@ -11,9 +11,11 @@ struct ServerInfoView: View {
     
     let title: String
     var isEditable = false
-    var isStepperNeeded = false
+    var isStepperEnabled = false
+    var isRefreshEnabled = false
     @Binding var value: String
     let color: Color
+    var refreshAction: (() -> Void)?
     
     var body: some View {
         HStack {
@@ -29,11 +31,18 @@ struct ServerInfoView: View {
                 .foregroundStyle(color)
                 .background { Color.black.opacity(0.6) }
                 .overlay(alignment: .trailing) {
-                    if isEditable, isStepperNeeded {
+                    // Show only for PORT field
+                    if isEditable, isStepperEnabled {
                         Stepper("", value: $value.integer, in: 0...65535).padding(.horizontal, 3)
                     }
                 }
                 .font(.seiha3)
+                .overlay(alignment: .trailing) {
+                    // Show only for IP field, works if server is not running
+                    if isRefreshEnabled {
+                        RefreshView(action: refreshAction)
+                    }
+                }
         }
     }
 }
@@ -42,7 +51,7 @@ struct ServerInfoView: View {
     ServerInfoView(
         title: "Label:",
         isEditable: true,
-        isStepperNeeded: true,
+        isStepperEnabled: true,
         value: .constant("8080"),
         color: .infoText
     )

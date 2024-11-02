@@ -111,7 +111,7 @@ final class DowngradingViewModel: ObservableObject {
         }
     }
     
-    private func setLocalIp() async {
+    func setLocalIp() async {
         localIp = await network.fetchLocalIp()
     }
     

@@ -25,15 +25,25 @@ struct ProxyServerView: View {
                 // Local IP view
                 ServerInfoView(
                     title: LocalizationKeys.ServerInfo.localIP,
+                    isRefreshEnabled: !viewModel.isServerRunning,
                     value: $viewModel.localIp,
-                    color: viewModel.isServerRunning ? .accent : .infoText
+                    color: viewModel.isServerRunning ? .accent : .infoText,
+                    refreshAction: {
+                        if !viewModel.isServerRunning {
+                            Task {
+                                // short delay before IP update
+                                try await Task.sleep(for: .seconds(2))
+                                await viewModel.setLocalIp()
+                            }
+                        }
+                    }
                 )
                 
                 // Port view
                 ServerInfoView(
                     title: LocalizationKeys.ServerInfo.port,
                     isEditable: !viewModel.isServerRunning,
-                    isStepperNeeded: true,
+                    isStepperEnabled: true,
                     value: $viewModel.port,
                     color: viewModel.isServerRunning ? .accent : .infoText
                 )

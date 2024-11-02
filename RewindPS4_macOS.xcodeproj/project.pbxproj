@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		180710802CA862DD00F088E7 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1807107F2CA862DD00F088E7 /* View+.swift */; };
 		180710832CA8637F00F088E7 /* LoadingFillModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180710822CA8637F00F088E7 /* LoadingFillModifier.swift */; };
-		180710852CA8717100F088E7 /* AnimatedStripedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180710842CA8717100F088E7 /* AnimatedStripedView.swift */; };
 		181403322C8F7F3C00E369D7 /* Logs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181403312C8F7F3C00E369D7 /* Logs.swift */; };
 		181403342C8F7F6E00E369D7 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181403332C8F7F6E00E369D7 /* Logging.swift */; };
 		18187F4C2CA530EF0011055D /* Collection+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18187F4B2CA530EF0011055D /* Collection+.swift */; };
@@ -28,6 +27,7 @@
 		183B7D582CAD822E00BC49B7 /* ModeSelectionButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B7D572CAD822E00BC49B7 /* ModeSelectionButtonStyle.swift */; };
 		183B7D5A2CAD825500BC49B7 /* StartButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B7D592CAD825500BC49B7 /* StartButtonStyle.swift */; };
 		183B7D5E2CB1A53E00BC49B7 /* StripedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B7D5D2CB1A53E00BC49B7 /* StripedView.swift */; };
+		18464F672CD667D90061B1A1 /* RefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18464F662CD667D50061B1A1 /* RefreshView.swift */; };
 		18735AA82C80B86D00486D28 /* RewindPS4_macOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18735AA72C80B86D00486D28 /* RewindPS4_macOSApp.swift */; };
 		18735AAA2C80B86D00486D28 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18735AA92C80B86D00486D28 /* ContentView.swift */; };
 		18735AAC2C80B87A00486D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18735AAB2C80B87A00486D28 /* Assets.xcassets */; };
@@ -86,7 +86,6 @@
 /* Begin PBXFileReference section */
 		1807107F2CA862DD00F088E7 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		180710822CA8637F00F088E7 /* LoadingFillModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFillModifier.swift; sourceTree = "<group>"; };
-		180710842CA8717100F088E7 /* AnimatedStripedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedStripedView.swift; sourceTree = "<group>"; };
 		181403312C8F7F3C00E369D7 /* Logs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logs.swift; sourceTree = "<group>"; };
 		181403332C8F7F6E00E369D7 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		18187F4B2CA530EF0011055D /* Collection+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+.swift"; sourceTree = "<group>"; };
@@ -105,6 +104,7 @@
 		183B7D572CAD822E00BC49B7 /* ModeSelectionButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSelectionButtonStyle.swift; sourceTree = "<group>"; };
 		183B7D592CAD825500BC49B7 /* StartButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonStyle.swift; sourceTree = "<group>"; };
 		183B7D5D2CB1A53E00BC49B7 /* StripedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripedView.swift; sourceTree = "<group>"; };
+		18464F662CD667D50061B1A1 /* RefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshView.swift; sourceTree = "<group>"; };
 		18735AA72C80B86D00486D28 /* RewindPS4_macOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewindPS4_macOSApp.swift; sourceTree = "<group>"; };
 		18735AA92C80B86D00486D28 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		18735AAB2C80B87A00486D28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -161,10 +161,10 @@
 		1823CE022C81F35C00C80D12 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				18464F662CD667D50061B1A1 /* RefreshView.swift */,
 				1823CE042C821B8E00C80D12 /* InfoLabelView.swift */,
 				18DF17EE2C960EA600D0B31D /* SpinnerView.swift */,
 				18D1B2FE2C98416A006B3E1E /* GuideLinkLabel.swift */,
-				180710842CA8717100F088E7 /* AnimatedStripedView.swift */,
 				183B7D5D2CB1A53E00BC49B7 /* StripedView.swift */,
 			);
 			path = Views;
@@ -479,6 +479,7 @@
 				18A3B0192C8B349A00870E0C /* Image+.swift in Sources */,
 				1823CE192C84809700C80D12 /* Binding+.swift in Sources */,
 				1823CE172C844F8200C80D12 /* Mode.swift in Sources */,
+				18464F672CD667D90061B1A1 /* RefreshView.swift in Sources */,
 				183B7D582CAD822E00BC49B7 /* ModeSelectionButtonStyle.swift in Sources */,
 				183B7D5A2CAD825500BC49B7 /* StartButtonStyle.swift in Sources */,
 				1823CE052C821B8E00C80D12 /* InfoLabelView.swift in Sources */,
@@ -488,7 +489,6 @@
 				18D1B3012C9841A6006B3E1E /* Links.swift in Sources */,
 				189319CD2C8D7ECC0030EFE0 /* Proxy.swift in Sources */,
 				18FB6E1E2CA093A3003B6B0B /* FAQView.swift in Sources */,
-				180710852CA8717100F088E7 /* AnimatedStripedView.swift in Sources */,
 				18FB6E222CA0982A003B6B0B /* ErrorCodes.swift in Sources */,
 				18A3B0152C8B2B9200870E0C /* GameInfo.swift in Sources */,
 				18735AA82C80B86D00486D28 /* RewindPS4_macOSApp.swift in Sources */,
