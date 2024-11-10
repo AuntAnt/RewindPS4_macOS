@@ -9,7 +9,8 @@ import SwiftUI
 
 struct DeviceView: View {
     
-    @EnvironmentObject private var viewModel: DowngradingViewModel
+    @EnvironmentObject private var mainViewModel: DowngradingViewModel
+    @StateObject private var viewModel = DeviceViewModel(logging: Logging(), proxyService: Proxy())
     
     var body: some View {
         ZStack {
@@ -37,6 +38,15 @@ struct DeviceView: View {
                 .foregroundStyle(.accent)
             }
         }
+        .onReceive(mainViewModel.$isServerRunning, perform: { isRunning in
+            if isRunning {
+                Task {
+                    await viewModel.fetchConnectedClient()
+                }
+            } else {
+                viewModel.stopFetchingClient()
+            }
+        })
         .frame(width: 400, height: 100)
     }
 }
@@ -44,5 +54,4 @@ struct DeviceView: View {
 #Preview {
     DeviceView()
         .preferredColorScheme(.dark)
-        .environmentObject(DowngradingViewModel())
 }

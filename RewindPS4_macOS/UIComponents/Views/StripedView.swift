@@ -42,6 +42,7 @@ struct StripedView: View {
                         }
                     }
                     .clipped()
+                    .opacity(0.55)
             }
     }
 }

@@ -72,6 +72,5 @@ struct ProxyServerView: View {
 
 #Preview {
     ProxyServerView()
-        .environmentObject(DowngradingViewModel())
         .preferredColorScheme(.dark)
 }

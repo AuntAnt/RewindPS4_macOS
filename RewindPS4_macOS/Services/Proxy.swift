@@ -7,32 +7,20 @@
 
 import RewindPS4Proxy
 
-final class Proxy {
+protocol ProxyServiceProtocol {
+    func setMode(_ mode: Mode, _ url: String) async throws -> [String: Any]
+    func startProxy(on port: String) async throws
+    func stopProxy()
+    func pushSelectedModeLog(_ mode: Mode)
+    func detectConnectedDevice(_ userAgent: String) -> String
+}
+
+final class Proxy: ProxyServiceProtocol {
     
-    private let service: ProxyService
-    private let network: NetworkService
-    private let mapper: Mapper
+    private let service = ProxyServiceImpl.instance
     
-    init(service: ProxyService, network: NetworkService, mapper: Mapper) {
-        self.service = service
-        self.network = network
-        self.mapper = mapper
-    }
-    
-    func setMode(_ mode: Mode, _ url: String) async throws -> GameInfo? {
-        guard mode == .mode1 else {
-            let _ = try await service.setMode(mode.rawValue, url)
-            return nil
-        }
-        
-        async let setMode = service.setMode(mode.rawValue, url)
-        async let imageCover = getGameCoverImage(from: url)
-        
-        let cover = await imageCover
-        let response = try await setMode
-        let downgradeVersion = getDowngradeVersion(from: url)
-        
-        return mapper.createGameInfo(from: response, downgradeVersion, cover)
+    func setMode(_ mode: Mode, _ url: String) async throws -> [String : Any] {
+        return try await service.setMode(mode.rawValue, url)
     }
     
     func startProxy(on port: String) async throws {
@@ -49,13 +37,5 @@ final class Proxy {
     
     func detectConnectedDevice(_ userAgent: String) -> String {
         return service.detectConnectedClient(userAgent)
-    }
-    
-    private func getDowngradeVersion(from url: String) -> String {
-        return network.getGameVersion(from: url)
-    }
-    
-    private func getGameCoverImage(from url: String) async -> String? {
-        return try? await network.fetchGameImageCover(from: url)
     }
 }

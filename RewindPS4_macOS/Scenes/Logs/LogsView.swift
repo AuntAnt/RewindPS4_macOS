@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LogsView: View {
     
-    @EnvironmentObject private var viewModel: DowngradingViewModel
+    @StateObject private var viewModel = LogsViewModel(logging: Logging())
     
     var body: some View {
         VStack {
@@ -37,6 +37,9 @@ struct LogsView: View {
             
             LogsScrollView(logs: $viewModel.logs, autoscroll: viewModel.autoscroll)
         }
+        .task {
+            await viewModel.fetchLogs()
+        }
         .padding()
         .border(.gray, width: 1)
     }
@@ -44,6 +47,5 @@ struct LogsView: View {
 
 #Preview {
     LogsView()
-        .environmentObject(DowngradingViewModel())
         .preferredColorScheme(.dark)
 }

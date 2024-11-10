@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var viewModel = DowngradingViewModel()
+    @StateObject private var viewModel = DowngradingViewModel(network: Network(), proxy: Proxy(), mapper: Mapper())
     @StateObject private var faqViewModel = FAQViewModel()
     
     var body: some View {

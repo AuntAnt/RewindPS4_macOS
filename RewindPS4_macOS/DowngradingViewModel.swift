@@ -6,23 +6,9 @@
 //
 
 import SwiftUI
-import RewindPS4Proxy
 
 @MainActor
 final class DowngradingViewModel: ObservableObject {
-    
-    // MARK: - Connected client
-    
-    @Published var latestIp = LocalizationKeys.Device.waiting
-    @Published var device = LocalizationKeys.Device.waiting
-    private var clientTimer: Timer?
-    
-    // MARK: - Logs
-    
-    @Published var logs: [String] = []
-    @Published var autoscroll = true
-    @Published var logFiltering = false
-    private var logsTimer: Timer?
     
     // MARK: - Mode selection
     
@@ -32,7 +18,7 @@ final class DowngradingViewModel: ObservableObject {
                 jsonLink = ""
             }
             
-            if !isServerRunning {            
+            if !isServerRunning {
                 proxy.pushSelectedModeLog(currentMode)
             }
         }
@@ -58,28 +44,24 @@ final class DowngradingViewModel: ObservableObject {
     
     // MARK: - Dependency
     
-    let network: Network
-    let proxy: Proxy
-    let logging: Logging
+    private let network: NetworkServiceProtocol
+    private let proxy: ProxyServiceProtocol
+    private let mapper: Mapper
     
-    init() {
-        network = Network(networkService: NetworkServiceImpl.instance)
-        proxy = Proxy(service: ProxyServiceImpl.instance, network: NetworkServiceImpl.instance, mapper: Mapper())
-        logging = Logging(service: LoggingServiceImpl.instance)
+    init(network: NetworkServiceProtocol, proxy: ProxyServiceProtocol, mapper: Mapper) {
+        self.network = network
+        self.proxy = proxy
+        self.mapper = mapper
         
         Task {
             await setLocalIp()
-        }
-        
-        Task {
-            await fetchLogs()
         }
     }
     
     func changeMode() async {
         if currentMode == .mode2 {
             do {
-                let _ = try await proxy.setMode(currentMode, "")
+                _ = try await proxy.setMode(currentMode, "")
             } catch {
                 isError = true
                 alertMessage = error.localizedDescription
@@ -94,7 +76,7 @@ final class DowngradingViewModel: ObservableObject {
             return
         }
         
-        if network.isValidInput(jsonLink: jsonLink) {
+        if network.checkIfInputValid(jsonLink: jsonLink) {
             inputMessage = LocalizationKeys.Mode.Mode1.jsonCorrect
             await setMode()
         } else {
@@ -120,11 +102,11 @@ final class DowngradingViewModel: ObservableObject {
             isError = true
             serverStateLabel = LocalizationKeys.ServerInfo.notRunning
             alertMessage = LocalizationKeys.Mode.pleaseSelectAnyMode
-        } else if currentMode == .mode1, !network.isValidInput(jsonLink: jsonLink) {
+        } else if currentMode == .mode1, !network.checkIfInputValid(jsonLink: jsonLink) {
             isError = true
             serverStateLabel = LocalizationKeys.ServerInfo.notRunning
             alertMessage = LocalizationKeys.Error.Alert.incorrectJson
-        } else if network.isOccupied(port: port) {
+        } else if network.checkIfOccupied(port: port) {
             isError = true
             serverStateLabel = LocalizationKeys.ServerInfo.notRunning
             alertMessage = LocalizationKeys.Error.Alert.portUsed
@@ -147,9 +129,6 @@ final class DowngradingViewModel: ObservableObject {
                 
                 attemptToStart = false
             }
-            Task {
-                await fetchConnectedClient()
-            }
         }
     }
     
@@ -158,7 +137,6 @@ final class DowngradingViewModel: ObservableObject {
             return
         }
         
-        stopFetchingLogs()
         proxy.stopProxy()
         isServerRunning = false
         buttonLabel = LocalizationKeys.ServerInfo.Button.start
@@ -173,74 +151,18 @@ final class DowngradingViewModel: ObservableObject {
         isGameInfoLoading = true
         
         do {
-            gameInfo = try await proxy.setMode(currentMode, jsonLink)
+            var result = try await proxy.setMode(currentMode, jsonLink)
+            async let cover = network.getGameCoverImage(from: jsonLink)
+            
+            result["DowngradeVersion"] = network.getDowngradeVersion(from: jsonLink)
+            result["ImageCover"] = await cover
+            
+            gameInfo = mapper.createGameInfo(from: result)
+            
             isGameInfoLoading = false
         } catch {
             isError = true
             alertMessage = error.localizedDescription
         }
-    }
-    
-    // MARK: - Fetching logs every second
-    
-    private func fetchLogs() async {
-        guard logsTimer == nil else {
-            return
-        }
-        
-        logsTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            Task { @MainActor in
-                do {
-                    let data = try await self.logging.fetchLogs()
-                    
-                    var result: [String] = []
-                    
-                    data.logs.forEach { log in
-                        if !log.contains("***") {
-                            if !self.logFiltering
-                                || (log.contains("INFO")
-                                    || log.contains(".json")
-                                    || log.contains(".pkj")
-                                    || log.contains(".png")
-                                ) {
-                                result.append(log)
-                            }
-                        }
-                    }
-                    
-                    self.logs = result
-                } catch {
-                    self.logs = [error.localizedDescription]
-                }
-            }
-        }
-    }
-    
-    // MARK: - Fetching connected client info every 2 seconds when server is running
-    
-    private func fetchConnectedClient() async {
-        guard clientTimer == nil else {
-            return
-        }
-        
-        clientTimer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { _ in
-            Task { @MainActor in
-                let result = try? await self.logging.fetchClientStatus()
-                
-                if let result {
-                    self.latestIp = result.clientActive ? result.latestClientIP : LocalizationKeys.Device.waiting
-                    self.device = result.clientActive
-                        ? self.proxy.detectConnectedDevice(result.latestClientUserAgent)
-                        : LocalizationKeys.Device.waiting
-                }
-            }
-        }
-    }
-    
-    private func stopFetchingLogs() {
-        clientTimer?.invalidate()
-        clientTimer = nil
-        latestIp = LocalizationKeys.Device.waiting
-        device = LocalizationKeys.Device.waiting
     }
 }

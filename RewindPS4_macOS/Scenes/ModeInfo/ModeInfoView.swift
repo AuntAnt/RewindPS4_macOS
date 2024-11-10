@@ -28,6 +28,5 @@ struct ModeInfoView: View {
 
 #Preview {
     ModeInfoView()
-        .environmentObject(DowngradingViewModel())
         .preferredColorScheme(.dark)
 }

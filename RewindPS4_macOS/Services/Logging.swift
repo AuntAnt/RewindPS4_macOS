@@ -8,13 +8,14 @@
 import Foundation
 import RewindPS4Proxy
 
-final class Logging {
+protocol LoggingServiceProtocol {
+    func fetchClientStatus() async throws -> ClientStatus
+    func fetchLogs() async throws -> Logs
+}
+
+final class Logging: LoggingServiceProtocol {
  
-    private let service: LoggingService
-    
-    init(service: LoggingService) {
-        self.service = service
-    }
+    private let service = LoggingServiceImpl.instance
     
     func fetchClientStatus() async throws -> ClientStatus {
         let response = try await service.fetchClientStatus()
